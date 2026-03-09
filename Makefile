@@ -1,8 +1,8 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -pedantic
 
-SRCS = main.c auth.c transactions.c encryption.c reports.c utils.c
-OBJS = main.o auth.o transactions.o encryption.o reports.o utils.o
+SRCS = main.c auth.c transactions.c encryption.c reports.c
+OBJS = main.o auth.o transactions.o encryption.o reports.o
 
 
 all: main
@@ -26,11 +26,10 @@ encryption.o: encryption.c
 reports.o: reports.c
 	$(CC) $(CFLAGS) -c reports.c
 
-utils.o: utils.c
-	$(CC) $(CFLAGS) -c utils.c
 
 run: main
 	./main
+
 
 clean:
 	rm -f main $(OBJS)

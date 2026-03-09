@@ -18,6 +18,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 
 // ======================================================
@@ -30,11 +31,6 @@ void print_manage_transactions_menu();
 void print_search_filter_menu();
 void print_reports_menu();
 void print_welcome_message();
-
-// ---- utils.c functions ----
-int   my_strlen(char *str);
-void  my_strcpy(char *dest, char *src);
-int   my_strcmp(char *a, char *b);
 
 // ---- encryption.c functions ----
 void  encrypt_password(char *password, char *output);
@@ -79,9 +75,10 @@ char password[50] = "testpass";
 
 void print_manage_transactions_menu(){
     // This function displays the menu for the manage transactions page
+    
     int menuTransactionChoice;  // Users menu choice for the manage transactions menu
 
-    printf("\n========= Manage Transactions ==========\n");
+    printf("\n\n========= Manage Transactions ==========\n");
     printf("1. Add Transaction\n");
     printf("2. Delete Transaction\n");
     printf("3. Update Transaction\n");
@@ -93,29 +90,44 @@ void print_manage_transactions_menu(){
     getchar();
 
     switch (menuTransactionChoice){
-        case '1':
+        case '1':{
             add_transaction(username);
             break;
+        }
 
-        case '2':
-            // delete_transaction(username, id);
+        case '2':{
+            int id;
+            printf("Enter transaction ID to delete: ");
+            scanf("%d", &id);
+            while (getchar() != '\n');
+            delete_transaction(username, id);
             break;
+        }
 
-        case '3':
-            // update_transaction(username, id);
+        case '3':{
+            int id;
+            view_transactions(username);  // show transactions first so user knows the IDs
+            printf("Enter transaction ID to update: ");
+            scanf("%d", &id);
+            while (getchar() != '\n');
+            update_transaction(username, id);
             break;
+        }
 
-        case '4':
+        case '4':{
             view_transactions(username);
             break;
+        }
 
-        case '5':
+        case '5':{
             return; 
             break;
+        }
     
-        default:
+        default:{
             printf("Invalid choice\n");
             break;
+        }
     }
 }
 
@@ -125,7 +137,7 @@ void print_search_filter_menu(){
     // This function displays the menu for the search/filter transactions page
     int menuSearchFilterChoice; // Users menu choice for the search/filter transactions menu
 
-    printf("\n========= Search/Filter Transactions ==========\n");
+    printf("\n\n========= Search/Filter Transactions ==========\n");
     printf("1. Search by Date\n");
     printf("2. Filter by Category\n");
     printf("3. Filter by Type (Income/Expense)\n");
@@ -141,8 +153,8 @@ void print_search_filter_menu(){
         break;
     
     case '2':
-        // filter_by_category(username, category);
-        break;
+        /**/
+
     
     case '3':
         /* filter_by_type(username, type); */
@@ -164,7 +176,7 @@ void print_reports_menu(){
 
     int menuReportChoice;   // Users menu choice for the reports menu
 
-    printf("\n========= Reports & Summaries ==========\n");
+    printf("\n\n========= Reports & Summaries ==========\n");
     printf("1. Generate Monthly Report\n");
     printf("2. Categorized Breakdown\n");
     printf("3. Export Report to .txt\n");
@@ -205,7 +217,7 @@ void print_menu(int *running){
     printf("\nMenu Iteration: %d", menuIteration);   // Test purposes
 
     // Display menu options
-    printf("\n========= Main Menu ==========\n");
+    printf("\n\n========= Main Menu ==========\n");
     printf("0. Exit\n");
     printf("1. Manage Transactions\n");
     printf("2. Search/Filter Transactions\n");
