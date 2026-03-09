@@ -1,0 +1,36 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -pedantic
+
+SRCS = main.c auth.c transactions.c encryption.c reports.c utils.c
+OBJS = main.o auth.o transactions.o encryption.o reports.o utils.o
+
+
+all: main
+
+
+main: $(OBJS)
+	$(CC) $(CFLAGS) -o main $(OBJS)
+
+main.o: main.c
+	$(CC) $(CFLAGS) -c main.c
+
+auth.o: auth.c
+	$(CC) $(CFLAGS) -c auth.c
+
+transactions.o: transactions.c
+	$(CC) $(CFLAGS) -c transactions.c
+
+encryption.o: encryption.c
+	$(CC) $(CFLAGS) -c encryption.c
+
+reports.o: reports.c
+	$(CC) $(CFLAGS) -c reports.c
+
+utils.o: utils.c
+	$(CC) $(CFLAGS) -c utils.c
+
+run: main
+	./main
+
+clean:
+	rm -f main $(OBJS)
