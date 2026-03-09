@@ -52,18 +52,79 @@ void  filter_by_type(char *username, char *type);
 void  search_by_date(char *username, char *date);
 void  export_report(char *username);
 
+// ======================================================
+// ================ Test variables ====================
+// ======================================================
+
+int menuIteration = 0;  // This is for testing purposes. It allows us to see the menu multiple times without having to implement the full login system yet.
+    
+// Test case
+char username[50] = "testuser";
+char password[50] = "testpass";
+
 
 // ======================================================
 // ================ Main Menu Functions =================
 // ======================================================
 
-void  print_menu(){
+void  print_menu(int *running){
+    int menuChoice;
+
+    printf("\nMenu Iteration: %d", menuIteration);   // Test purposes
+
     // Display menu options
+    printf("\n========= Main Menu ==========\n");
+    printf("0. Exit\n");
+    printf("1. Add Transaction\n");
+    printf("2. Remove Transaction\n");
+    printf("3. Update Transaction\n");
+    printf("4. View Transactions\n");
+    printf("5. Generate Monthly Report\n");
+    printf("\nEnter your choice: ");
+    
+    menuIteration++;   
+
+    // Read user input for menu choice
+    menuChoice = getchar();
+    getchar();  
+
+    // Handle menu choice using a switch statement
+    switch (menuChoice){
+        case '0':
+            printf("Goodbye!\n");
+            *running = 0;
+            break;
+
+        case '1':
+            add_transaction(username);
+            break;
+
+        case '2':
+            printf("Removing Transaction\n");
+            break;
+        
+        case '3':
+            printf("Updating Transaction\n");
+            break;
+        
+        case '4':
+            printf("Viewing Transactions\n");
+            break;
+
+        case '5':
+            printf("Generating Monthly Report\n");
+            break;
+    
+        default:
+            printf("Invalid choice\n");
+            break;
+    }
+
 
 }
 
 
-void printWelcomeMessage(){
+void print_welcome_message(){
     // Display welcome message
 
     printf("\n==================================\n");
@@ -74,7 +135,14 @@ void printWelcomeMessage(){
 }
 
 
-int main(){
-    printWelcomeMessage();
+int main() {
+    print_welcome_message();
+
+    // Main menu loop
+    int running = 1;
+    while (running) {
+        print_menu(&running);
+    }
+
     return 0;
 }
