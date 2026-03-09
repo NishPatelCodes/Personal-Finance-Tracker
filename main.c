@@ -67,7 +67,69 @@ char password[50] = "testpass";
 // ================ Main Menu Functions =================
 // ======================================================
 
-void  print_menu(int *running){
+void print_manage_transactions_menu(){
+    int menuTransactionChoice;
+
+    printf("\n========= Manage Transactions ==========\n");
+    printf("1. Add Transaction\n");
+    printf("2. Delete Transaction\n");
+    printf("3. Update Transaction\n");
+    printf("4. View Transactions\n");
+    printf("5. Back to Main Menu\n");
+    printf("\nEnter your choice: ");
+
+    menuTransactionChoice = getchar();
+    getchar();
+
+    switch (menuTransactionChoice){
+        case '1':
+            add_transaction(username);
+            break;
+
+        case '2':
+            // delete_transaction(username, id);
+            break;
+
+        case '3':
+            // update_transaction(username, id);
+            break;
+
+        case '4':
+            view_transactions(username);
+            break;
+
+        case '5':
+            print_menu(&menuIteration);  
+            break;
+    
+        default:
+            printf("Invalid choice\n");
+            break;
+    }
+}
+
+
+void print_search_filter_menu(){
+    printf("\n========= Search/Filter Transactions ==========\n");
+    printf("1. Search by Date\n");
+    printf("2. Filter by Category\n");
+    printf("3. Filter by Type (Income/Expense)\n");
+    printf("4. Back to Main Menu\n");
+    printf("\nEnter your choice: ");
+}
+
+
+void print_reports_menu(){
+    printf("\n========= Reports & Summaries ==========\n");
+    printf("1. Generate Monthly Report\n");
+    printf("2. Catogorized Breakdown\n");
+    printf("3. Export Report to .txt\n");
+    printf("4. Back to Main Menu\n");
+    printf("\nEnter your choice: ");
+}
+
+
+void print_menu(int *running){
     int menuChoice;
 
     printf("\nMenu Iteration: %d", menuIteration);   // Test purposes
@@ -75,11 +137,9 @@ void  print_menu(int *running){
     // Display menu options
     printf("\n========= Main Menu ==========\n");
     printf("0. Exit\n");
-    printf("1. Add Transaction\n");
-    printf("2. Remove Transaction\n");
-    printf("3. Update Transaction\n");
-    printf("4. View Transactions\n");
-    printf("5. Generate Monthly Report\n");
+    printf("1. Manage Transactions\n");
+    printf("2. Search/Filter Transactions\n");
+    printf("3. Reports & Summaries\n");
     printf("\nEnter your choice: ");
     
     menuIteration++;   
@@ -96,23 +156,15 @@ void  print_menu(int *running){
             break;
 
         case '1':
-            add_transaction(username);
+            print_manage_transactions_menu();
             break;
 
         case '2':
-            printf("Removing Transaction\n");
+            print_search_filter_menu();
             break;
         
         case '3':
-            printf("Updating Transaction\n");
-            break;
-        
-        case '4':
-            printf("Viewing Transactions\n");
-            break;
-
-        case '5':
-            printf("Generating Monthly Report\n");
+            print_reports_menu();
             break;
     
         default:
@@ -126,7 +178,6 @@ void  print_menu(int *running){
 
 void print_welcome_message(){
     // Display welcome message
-
     printf("\n==================================\n");
     printf("Welcome to Personal Finance Tracker");
     printf("\n==================================\n\n");
