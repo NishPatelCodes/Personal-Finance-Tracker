@@ -24,6 +24,13 @@
 // ================ Function Prototypes =================
 // ======================================================
 
+// ---- main.c functions ----
+void print_menu(int *running);
+void print_manage_transactions_menu();
+void print_search_filter_menu();
+void print_reports_menu();
+void print_welcome_message();
+
 // ---- utils.c functions ----
 int   my_strlen(char *str);
 void  my_strcpy(char *dest, char *src);
@@ -52,6 +59,8 @@ void  filter_by_type(char *username, char *type);
 void  search_by_date(char *username, char *date);
 void  export_report(char *username);
 
+
+
 // ======================================================
 // ================ Test variables ====================
 // ======================================================
@@ -63,12 +72,14 @@ char username[50] = "testuser";
 char password[50] = "testpass";
 
 
+
 // ======================================================
 // ================ Main Menu Functions =================
 // ======================================================
 
 void print_manage_transactions_menu(){
-    int menuTransactionChoice;
+    // This function displays the menu for the manage transactions page
+    int menuTransactionChoice;  // Users menu choice for the manage transactions menu
 
     printf("\n========= Manage Transactions ==========\n");
     printf("1. Add Transaction\n");
@@ -99,7 +110,7 @@ void print_manage_transactions_menu(){
             break;
 
         case '5':
-            print_menu(&menuIteration);  
+            return; 
             break;
     
         default:
@@ -109,24 +120,83 @@ void print_manage_transactions_menu(){
 }
 
 
+
 void print_search_filter_menu(){
+    // This function displays the menu for the search/filter transactions page
+    int menuSearchFilterChoice; // Users menu choice for the search/filter transactions menu
+
     printf("\n========= Search/Filter Transactions ==========\n");
     printf("1. Search by Date\n");
     printf("2. Filter by Category\n");
     printf("3. Filter by Type (Income/Expense)\n");
     printf("4. Back to Main Menu\n");
     printf("\nEnter your choice: ");
+
+    menuSearchFilterChoice = getchar();
+    getchar();
+
+    switch (menuSearchFilterChoice){
+    case '1':
+        // search_by_date(username, date);
+        break;
+    
+    case '2':
+        // filter_by_category(username, category);
+        break;
+    
+    case '3':
+        /* filter_by_type(username, type); */
+        break;
+    
+    case '4':
+        return;
+        break;
+    
+    default:
+        break;
+    }
 }
+
 
 
 void print_reports_menu(){
+    // This function displays the menu for the reports page
+
+    int menuReportChoice;   // Users menu choice for the reports menu
+
     printf("\n========= Reports & Summaries ==========\n");
     printf("1. Generate Monthly Report\n");
-    printf("2. Catogorized Breakdown\n");
+    printf("2. Categorized Breakdown\n");
     printf("3. Export Report to .txt\n");
     printf("4. Back to Main Menu\n");
     printf("\nEnter your choice: ");
+
+    menuReportChoice = getchar();
+    getchar();
+
+    switch (menuReportChoice)
+    {
+    case '1':
+        generate_monthly_report(username);
+        break;
+    
+    case '2':
+        // filter_by_category(username, category);
+        break;
+    
+    case '3':
+        // filter_by_type(username, type);
+        break;
+    
+    case '4':
+        return;
+        break;
+    
+    default:
+        break;
+    }
 }
+
 
 
 void print_menu(int *running){
@@ -176,6 +246,7 @@ void print_menu(int *running){
 }
 
 
+
 void print_welcome_message(){
     // Display welcome message
     printf("\n==================================\n");
@@ -184,6 +255,7 @@ void print_welcome_message(){
 
     printf("Created by: Owen Fugger and Nish Patel\n\n");
 }
+
 
 
 int main() {
