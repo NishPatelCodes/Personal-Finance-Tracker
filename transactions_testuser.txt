@@ -1,2 +1,2 @@
-2026-02-01,Food,I was hungry,21.00,expense
 2026-01-03,Pay,I got paid,550.00,Income
+2026-03-10,Gas,Filled up the car,69.67,Expense

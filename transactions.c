@@ -3,7 +3,7 @@
  * 
  * Handles all transaction file operations (CRUD).
  * Contains functions to add, delete, update, and view
- * income/expense transactions stored in the user's .dat file.
+ * income/expense transactions stored in the user's .txt file.
  */
 
 #include <stdlib.h>
@@ -11,89 +11,50 @@
 #include <string.h>
 
 
-
 void add_transaction(char *username) {
-    // This function prompts the user for transaction details and saves it to the user's transactions file
+    // Prompts the user for transaction details and appends it to their transactions file
 
-    // Initializing variables to hold transaction details
     char date[11];
     char category[30];
     char description[100];
     float amount;
     char type[10];
 
-
-    // Prompt the user for transaction details
-    // Date
+    // Prompt the user for each transaction field
     printf("Date (YYYY-MM-DD): ");
     scanf("%s", date);
-    while (getchar() != '\n');  // Clear input buffer after reading date string 
+    while (getchar() != '\n');      // Clear input buffer after scanf
 
-    // Category
     printf("Category (Food, Rent, etc): ");
     scanf("%s", category);
-    while (getchar() != '\n');  // Clear input buffer after reading category string
+    while (getchar() != '\n');      // Clear input buffer after scanf
 
-    // Description
     printf("Description: ");
-    fgets(description, sizeof(description), stdin);
+    fgets(description, sizeof(description), stdin);  // fgets used to allow spaces
     int len = strlen(description);
-    if (description[len - 1] == '\n')   // remove trailing newline from fgets
-        description[len - 1] = '\0';     
+    if (description[len - 1] == '\n')
+        description[len - 1] = '\0';    // Strip trailing newline left by fgets
 
-    // Amount
     printf("Amount: ");
     scanf("%f", &amount);
-    while (getchar() != '\n');  // Clear input buffer after reading amount
+    while (getchar() != '\n');      // Clear input buffer after scanf
 
-    // Type
     printf("Type (income/expense): ");
     scanf("%s", type);
-    while (getchar() != '\n');  // Clear input buffer after reading type string
+    while (getchar() != '\n');      // Clear input buffer after scanf
 
-
-    // Build the filename e.g. "transactions_testuser.txt"
+    // Build filename e.g. "transactions_testuser.txt"
     char filename[100];
-    int i = 0, j = 0;
+    sprintf(filename, "transactions_%s.txt", username);
 
-
-    // copy "transactions_" into filename
-    char prefix[] = "transactions_";
-    while (prefix[i] != '\0') {
-        filename[i] = prefix[i];
-        i++;
-    }
-
-
-    // copy username into filename
-    while (username[j] != '\0') {
-        filename[i] = username[j];
-        i++;
-        j++;
-    }
-
-
-    // copy ".txt" into filename
-    char ext[] = ".txt";
-    int k = 0;
-    while (ext[k] != '\0') {
-        filename[i] = ext[k];
-        i++;
-        k++;
-    }
-
-
-    filename[i] = '\0'; // Null-terminate the filename string
-
-
-    // Open the file in append mode and write the transaction
+    // Open in append mode — creates the file if it doesn't exist
     FILE *file = fopen(filename, "a");
     if (file == NULL) {
         printf("Error opening file.\n");
         return;
     }
 
-    // Write the transaction details in CSV format: date,category,description,amount,type
+    // Write transaction as a comma separated line: date,category,description,amount,type
     fprintf(file, "%s,%s,%s,%.2f,%s\n", date, category, description, amount, type);
     fclose(file);
 
@@ -101,43 +62,20 @@ void add_transaction(char *username) {
 }
 
 
+int delete_transaction(char *username, int id) {
+    // Deletes a transaction by ID by copying all other lines into a temp file,
+    // then replacing the original file with the temp file
 
-int   delete_transaction(char *username, int id){
-    // Delete a transaction by its ID from the user's transactions file
-
-    // Initializing variables
     char filename[100];
-    char tempFilename[110] = "temp_";
+    char tempFilename[110];
     char line[256];
     int currentId = 0;
     int deleted = 0;
 
+    // Build filenames
+    sprintf(filename, "transactions_%s.txt", username);
+    sprintf(tempFilename, "temp_transactions_%s.txt", username);
 
-    // Build the filename e.g. "transactions_testuser.txt"
-    int i = 0, j = 0;
-    char prefix[] = "transactions_";
-    char ext[]    = ".txt";
-
-
-    // Construct the filename based on the username
-    while (prefix[i] != '\0') { filename[i] = prefix[i]; i++; }
-    while (username[j] != '\0') { filename[i] = username[j]; i++; j++; }
-    j = 0;
-    while (ext[j] != '\0') { filename[i] = ext[j]; i++; j++; }
-    filename[i] = '\0';
-
-
-    
-    i = 5;
-    while (filename[j] != '\0') {
-        tempFilename[i] = filename[j];
-        i++;
-        j++;
-    }
-    tempFilename[i] = '\0';
-
-
-    // Open the original file for reading and a temporary file for writing
     FILE *file = fopen(filename, "r");
     if (file == NULL) {
         printf("No transactions found.\n");
@@ -151,13 +89,12 @@ int   delete_transaction(char *username, int id){
         return 0;
     }
 
-
-    // Read through the original file line by line, copying all lines except the one to delete into the temporary file
+    // Copy all lines except the one matching the target ID into the temp file
     while (fgets(line, sizeof(line), file) != NULL) {
         currentId++;
         if (currentId == id) {
-            deleted = 1;
-            continue;
+            deleted = 1;    // mark that we found and skipped the target line
+            continue;       // skip writing this line to effectively delete it
         }
         fputs(line, tempFile);
     }
@@ -167,10 +104,11 @@ int   delete_transaction(char *username, int id){
 
     if (!deleted) {
         printf("Transaction ID not found.\n");
-        remove(tempFilename);
+        remove(tempFilename);   // clean up temp file if ID wasn't found
         return 0;
     }
 
+    // Replace original file with the temp file
     remove(filename);
     rename(tempFilename, filename);
 
@@ -179,31 +117,20 @@ int   delete_transaction(char *username, int id){
 }
 
 
+int update_transaction(char *username, int id) {
+    // Updates a single field of a transaction by ID.
+    // Reads all lines into a temp file, replacing the target line with updated data,
+    // then replaces the original file with the temp file
 
-int   update_transaction(char *username, int id){
     char filename[100];
-    char tempFilename[110] = "temp_";
+    char tempFilename[110];
     char line[256];
     int currentId = 0;
     int updated = 0;
 
-    int i = 0, j = 0;
-    char prefix[] = "transactions_";
-    char ext[]    = ".txt";
-
-    while (prefix[i] != '\0') { filename[i] = prefix[i]; i++; }
-    while (username[j] != '\0') { filename[i] = username[j]; i++; j++; }
-    j = 0;
-    while (ext[j] != '\0') { filename[i] = ext[j]; i++; j++; }
-    filename[i] = '\0';
-
-    i = 5;
-    while (filename[j] != '\0') {
-        tempFilename[i] = filename[j];
-        i++;
-        j++;
-    }
-    tempFilename[i] = '\0';
+    // Build filenames
+    sprintf(filename, "transactions_%s.txt", username);
+    sprintf(tempFilename, "temp_transactions_%s.txt", username);
 
     FILE *file = fopen(filename, "r");
     if (file == NULL) {
@@ -220,38 +147,41 @@ int   update_transaction(char *username, int id){
 
     while (fgets(line, sizeof(line), file) != NULL) {
         currentId++;
+
         if (currentId == id) {
+            // Parse the CSV line into individual fields
             char fields[5][100];
             int pos = 0, col = 0, start = 0;
             int c;
 
             while (line[pos] != '\0' && line[pos] != '\n') {
                 if (line[pos] == ',') {
-                    fields[col][pos - start] = '\0';
+                    fields[col][pos - start] = '\0'; // null terminate current field
                     col++;
-                    start = pos + 1;
+                    start = pos + 1;    // next field starts after the comma
                 } else {
                     fields[col][pos - start] = line[pos];
                 }
                 pos++;
             }
-            fields[col][pos - start] = '\0';
+            fields[col][pos - start] = '\0';    // null terminate last field
 
+            // Show current values so user knows what they are changing
             printf("Current transaction %d:\n", id);
-            printf("Date: %s, Category: %s, Description: %s, Amount: %s, Type: %s\n",
+            printf("Date: %s | Category: %s | Description: %s | Amount: %s | Type: %s\n",
                    fields[0], fields[1], fields[2], fields[3], fields[4]);
 
-            printf("What do you want to update?\n");
+            printf("\nWhat do you want to update?\n");
             printf("1. Date\n");
             printf("2. Category\n");
             printf("3. Description\n");
             printf("4. Amount\n");
             printf("5. Type\n");
-            printf("6. Back\n");       
+            printf("6. Back\n");
             printf("Enter choice: ");
 
             c = getchar();
-            while (getchar() != '\n');
+            while (getchar() != '\n');  // flush buffer after reading choice
 
             switch (c) {
                 case '1':
@@ -279,12 +209,11 @@ int   update_transaction(char *username, int id){
                     scanf("%99s", fields[4]);
                     while (getchar() != '\n');
                     break;
-                case '6':                          // add this
-                    fputs(line, tempFile);         // write original line unchanged
-                    updated = 1;                   // mark as handled
+                case '6':
+                    // User chose to go back — discard temp file and exit with no changes
                     fclose(file);
                     fclose(tempFile);
-                    remove(tempFilename);          // discard temp file
+                    remove(tempFilename);
                     printf("No changes made.\n");
                     return 0;
                 default:
@@ -292,9 +221,13 @@ int   update_transaction(char *username, int id){
                     break;
             }
 
-            fprintf(tempFile, "%s,%s,%s,%s,%s\n",fields[0], fields[1], fields[2], fields[3], fields[4]);
+            // Write the updated fields back as a CSV line
+            fprintf(tempFile, "%s,%s,%s,%s,%s\n",
+                    fields[0], fields[1], fields[2], fields[3], fields[4]);
             updated = 1;
+
         } else {
+            // Not the target line — copy it unchanged
             fputs(line, tempFile);
         }
     }
@@ -308,6 +241,7 @@ int   update_transaction(char *username, int id){
         return 0;
     }
 
+    // Replace original file with updated temp file
     remove(filename);
     rename(tempFilename, filename);
 
@@ -316,21 +250,15 @@ int   update_transaction(char *username, int id){
 }
 
 
-
 void view_transactions(char *username) {
+    // Reads and displays all transactions from the user's file in a formatted table
+
     char filename[100];
     char line[256];
-    int id = 1;
+    int id = 1;     // used to display the transaction ID (line number)
 
-    int i = 0, j = 0;
-    char prefix[] = "transactions_";
-    char ext[]    = ".txt";
-
-    while (prefix[i] != '\0') { filename[i] = prefix[i]; i++; }
-    while (username[j] != '\0') { filename[i] = username[j]; i++; j++; }
-    j = 0;
-    while (ext[j] != '\0') { filename[i] = ext[j]; i++; j++; }
-    filename[i] = '\0';
+    // Build filename e.g. "transactions_testuser.txt"
+    sprintf(filename, "transactions_%s.txt", username);
 
     FILE *file = fopen(filename, "r");
     if (file == NULL) {
@@ -338,16 +266,18 @@ void view_transactions(char *username) {
         return;
     }
 
-    // add ID to header
+    // Print table header
     printf("\n========= Transactions =========\n");
     printf("%-5s %-12s %-12s %-30s %-10s %-10s\n",
            "ID", "Date", "Category", "Description", "Amount", "Type");
     printf("------------------------------------------------------------\n");
 
+    // Read and display each transaction line by line
     while (fgets(line, sizeof(line), file) != NULL) {
         int pos = 0, col = 0, start = 0;
         char fields[5][100];
 
+        // Parse the comma separated line into fields
         while (line[pos] != '\0' && line[pos] != '\n') {
             if (line[pos] == ',') {
                 fields[col][pos - start] = '\0';
@@ -360,9 +290,10 @@ void view_transactions(char *username) {
         }
         fields[col][pos - start] = '\0';
 
+        // Print each transaction as a formatted row with its ID
         printf("%-5d %-12s %-12s %-30s %-10s %-10s\n",
                id, fields[0], fields[1], fields[2], fields[3], fields[4]);
-        id++;  // increment after each row
+        id++;
     }
 
     printf("============================================================\n");
