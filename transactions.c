@@ -205,7 +205,7 @@ int update_transaction(char *username, int id) {
                     while (getchar() != '\n');
                     break;
                 case '5':
-                    printf("New Type (income/expense): ");
+                    printf("New Type (Income/Expense): ");
                     scanf("%99s", fields[4]);
                     while (getchar() != '\n');
                     break;
@@ -267,10 +267,10 @@ void view_transactions(char *username) {
     }
 
     // Print table header
-    printf("\n========= Transactions =========\n");
+    printf("\n\n================================= Transactions ===================================\n");
     printf("%-5s %-12s %-12s %-30s %-10s %-10s\n",
            "ID", "Date", "Category", "Description", "Amount", "Type");
-    printf("------------------------------------------------------------\n");
+    printf("----------------------------------------------------------------------------------\n");
 
     // Read and display each transaction line by line
     while (fgets(line, sizeof(line), file) != NULL) {
@@ -296,6 +296,6 @@ void view_transactions(char *username) {
         id++;
     }
 
-    printf("============================================================\n");
+    printf("==================================================================================\n");
     fclose(file);
 }

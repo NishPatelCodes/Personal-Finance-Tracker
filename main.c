@@ -97,7 +97,7 @@ void print_manage_transactions_menu(){
 
         case '2':{
             int id;
-            printf("Enter transaction ID to delete: ");
+            printf("\nEnter transaction ID to delete: ");
             scanf("%d", &id);
             while (getchar() != '\n');
             delete_transaction(username, id);
@@ -214,10 +214,10 @@ void print_reports_menu(){
 void print_menu(int *running){
     int menuChoice;
 
-    printf("\nMenu Iteration: %d", menuIteration);   // Test purposes
+    printf("\n\nMenu Iteration: %d", menuIteration);   // Test purposes
 
     // Display menu options
-    printf("\n\n========= Main Menu ==========\n");
+    printf("\n========= Main Menu ==========\n");
     printf("0. Exit\n");
     printf("1. Manage Transactions\n");
     printf("2. Search/Filter Transactions\n");
