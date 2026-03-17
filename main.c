@@ -52,12 +52,7 @@ int   update_transaction(char *username, int id);
 void  view_transactions(char *username);
 
 // ---- reports.c functions ----
-void  generate_monthly_report(char *username);
-void  filter_by_category(char *username, char *category);
-void  filter_by_type(char *username, char *type);
-void  search_by_date(char *username, char *date);
-void  export_report(char *username);
-
+void  generate_overall_report(char *username);
 
 
 // ======================================================
@@ -221,7 +216,7 @@ void print_reports_menu() {
 
         case '1':
             // Generate a monthly summary report for the current user
-            generate_monthly_report(username);
+            generate_overall_report(username);
             break;
 
         case '2':

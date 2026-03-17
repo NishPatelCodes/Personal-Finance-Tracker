@@ -68,7 +68,6 @@ void add_transaction(char *username) {
     char filename[100];
     sprintf(filename, "transactions_%s.txt", username);
 
-
     // Open the file in append mode "a"
     // If the file does not exist, fopen will create it automatically
     // If it does exist, new transactions will be added to the end
@@ -356,7 +355,6 @@ int update_transaction(char *username, int id) {
     printf("Transaction updated.\n");
     return 1;
 }
-
 
 
 // This function reads and displays all transactions from the user's file in a formatted table
