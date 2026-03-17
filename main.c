@@ -202,7 +202,7 @@ void print_reports_menu() {
     int menuReportChoice;   // stores the users menu choice as a character
 
     printf("\n\n========= Reports & Summaries ==========\n");
-    printf("1. Generate Monthly Report\n");
+    printf("1. Generate Overall Report\n");
     printf("2. Categorized Breakdown\n");
     printf("3. Export Report to .txt\n");
     printf("4. Back to Main Menu\n");
@@ -222,6 +222,11 @@ void print_reports_menu() {
         case '2':
             // TODO: implement filter_by_category in reports.c
             // filter_by_category(username, category);
+            char category[30];
+            printf("Enter category: ");
+            scanf("%s", category);
+            while (getchar() != '\n');
+            generate_category_report(username, category);
             break;
 
         case '3':

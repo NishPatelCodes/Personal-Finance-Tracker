@@ -65,3 +65,57 @@ void  generate_overall_report(char *username){
     printf("Total Expenses: $%.2f\n", totalExpenses);
     printf("Net Balance: $%.2f\n", netBalance);
 }
+
+void generate_category_report(char *username, char *category) {
+    char filename[100];
+    char line[256];
+    char target_category[30];
+    float totalIncome = 0.0f;
+    float totalExpenses = 0.0f;
+
+    strcpy(target_category, category);
+
+    sprintf(filename, "transactions_%s.txt", username);
+    FILE *file = fopen(filename, "r");
+    if (file == NULL) {
+        printf("No transactions found.\n");
+        return;
+    }
+
+    while (fgets(line, sizeof(line), file) != NULL) {
+        char fields[5][100];
+        int pos = 0, col = 0, start = 0;
+
+        // Split line by commas into 5 fields
+        while (line[pos] != '\0' && line[pos] != '\n' && line[pos] != '\r') {
+            if (line[pos] == ',') {
+                fields[col][pos - start] = '\0';
+                col++;
+                start = pos + 1;
+            } else {
+                fields[col][pos - start] = line[pos];
+            }
+            pos++;
+        }
+        fields[col][pos - start] = '\0';
+
+        // fields[1] = category, fields[3] = amount, fields[4] = type
+        if (strcmp(fields[1], target_category) == 0) {
+            float amount = (float)atof(fields[3]);
+            char *type = fields[4];
+
+            if (strcmp(type, "income") == 0 || strcmp(type, "Income") == 0) {
+                totalIncome += amount;
+            } else if (strcmp(type, "expense") == 0 || strcmp(type, "Expense") == 0) {
+                totalExpenses += amount;
+            }
+        }
+    }
+
+    fclose(file);
+
+    printf("Category: %s\n", category);
+    printf("  Total Income:   $%.2f\n", totalIncome);
+    printf("  Total Expenses: $%.2f\n", totalExpenses);
+    printf("  Net:            $%.2f\n", totalIncome - totalExpenses);
+}
