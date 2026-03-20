@@ -34,6 +34,7 @@ void print_manage_transactions_menu();
 void print_search_filter_menu();
 void print_reports_menu();
 void print_welcome_message();
+void user_login_menu();
 
 // ---- encryption.c functions ----
 void  encrypt_password(char *password, char *output);
@@ -62,8 +63,6 @@ void  generate_overall_report(char *username);
 // They allow us to test the program without implementing the full login system
 // They will be removed once auth.c is fully implemented
 
-int menuIteration = 0;  // tracks how many times the main menu has been displayed
-
 // Hardcoded test credentials — replace with real login once auth.c is done
 char username[50] = "testuser";
 char password[50] = "testpass";
@@ -81,7 +80,7 @@ void print_manage_transactions_menu() {
 
     int menuTransactionChoice;  // stores the users menu choice as a character
 
-    printf("\n\n========= Manage Transactions ==========\n");
+    printf("\n\n\n\n========= Manage Transactions ==========\n");
     printf("1. Add Transaction\n");
     printf("2. Delete Transaction\n");
     printf("3. Update Transaction\n");
@@ -153,7 +152,7 @@ void print_search_filter_menu() {
 
     int menuSearchFilterChoice; // stores the users menu choice as a character
 
-    printf("\n\n========= Search/Filter Transactions ==========\n");
+    printf("\n\n\n\n========= Search/Filter Transactions ==========\n");
     printf("1. Search by Date\n");
     printf("2. Filter by Category\n");
     printf("3. Filter by Type (Income/Expense)\n");
@@ -201,7 +200,7 @@ void print_reports_menu() {
 
     int menuReportChoice;   // stores the users menu choice as a character
 
-    printf("\n\n========= Reports & Summaries ==========\n");
+    printf("\n\n\n\n========= Reports & Summaries ==========\n");
     printf("1. Generate Overall Report\n");
     printf("2. Categorized Breakdown\n");
     printf("3. Export Report to .txt\n");
@@ -253,18 +252,12 @@ void print_menu(int *running) {
 
     int menuChoice; // stores the users menu choice as a character
 
-    // Display the menu iteration counter for testing purposes
-    // This will be removed once the full login system is implemented
-    printf("\n\nMenu Iteration: %d", menuIteration);
-
-    printf("\n========= Main Menu ==========\n");
+    printf("\n\n\n========= Main Menu ==========\n");
     printf("0. Exit\n");
     printf("1. Manage Transactions\n");
     printf("2. Search/Filter Transactions\n");
     printf("3. Reports & Summaries\n");
     printf("\nEnter your choice: ");
-
-    menuIteration++;    // increment the menu iteration counter each time the menu is displayed
 
     // Read the users choice as a single character
     menuChoice = getchar();
@@ -305,19 +298,100 @@ void print_menu(int *running) {
 // This function displays the welcome message when the program starts
 // It is called once at the beginning of main() before the menu loop
 void print_welcome_message() {
-    printf("\n==================================\n");
-    printf("Welcome to Personal Finance Tracker");
-    printf("\n==================================\n\n");
-    printf("Created by: Owen Fugger and Nish Patel\n\n");
+    printf("\n========================================\n");
+    printf("   Welcome to Personal Finance Tracker   ");
+    printf("\n========================================");
+    printf("\nCreated by: Owen Fugger and Nish Patel\n\n");
 }
 
 
 
-// Entry point of the program
+// ======================================================
+// ================== User Log in =======================
+// ======================================================
+
+
+// This function displays the log in startup screen
+// Offering users to log in or register for an account
+void user_login_menu() {
+
+    int loggedIn = 0;
+
+    while (!loggedIn) {
+        printf("\n0. Exit program");
+        printf("\n1. Log in");
+        printf("\n2. Register");
+        printf("\n\nEnter your choice: ");
+
+        int loginMenuChoice = getchar();
+        getchar();
+
+
+        char inputUsername[50];
+        char inputPassword[50];
+
+
+        switch (loginMenuChoice) {
+            // Exits the program
+            case '0':
+                printf("Goodbye!\n");
+                exit(0);
+                break;
+            
+            // Prompts user to enter user name and password to log in
+            case '1':
+                printf("Username: ");
+                scanf("%s", inputUsername);
+                while (getchar() != '\n');
+
+                printf("Password: ");
+                scanf("%s", inputPassword);
+                while (getchar() != '\n');
+
+                loggedIn = login_user(inputUsername, inputPassword);
+                if (!loggedIn)
+                    printf("Invalid username or password. Try again.\n");
+                break;
+
+            
+            case '2':
+                printf("Username: ");
+                scanf("%s", inputUsername);
+                while (getchar() != '\n');
+
+                printf("Password: ");
+                scanf("%s", inputPassword);
+                while (getchar() != '\n');
+
+                loggedIn = register_user(inputUsername, inputPassword);
+                if (!loggedIn)
+                    printf("Registration failed. Try again.\n");
+                break;
+
+            case '3':
+                loggedIn = 1;
+                strcpy(username, "testuser");
+                printf("\nDev bypass activated. Logged in as testuser.\n");
+                break;
+            
+            default:
+                printf("Invalid choice\n");
+                break;
+        }
+
+        // copy the username into the global variable once logged in
+            if (loggedIn && loginMenuChoice != '3')
+            strcpy(username, inputUsername);
+    }
+}
+
+
+
 // Displays the welcome message then enters the main menu loop
 // The loop continues until the user chooses to exit (running = 0)
 int main() {
     print_welcome_message();
+    user_login_menu();
 
     // running controls the main menu loop
     // it starts as 1 (true) and is set to 0 (false) when the user chooses to exit
