@@ -1,0 +1,100 @@
+2026-04-15,Refunds,Returned item reimbursement,79.33,income
+2026-04-15,Shopping,Personal care shopping,55.53,expense
+2026-04-16,PartTimeJob,Cafe shift payment,207.52,income
+2026-04-16,Transport,Ride share to campus,6.53,expense
+2026-04-17,Scholarship,Academic excellence scholarship,1296.56,income
+2026-04-17,Transport,Fuel and parking,38.26,expense
+2026-04-18,Freelance,Content writing assignment,421.35,income
+2026-04-18,Dining,Dinner takeaway,29.85,expense
+2026-04-19,PartTimeJob,Teaching assistant hours,185.09,income
+2026-04-19,Rent,Rent payment for apartment,617.80,expense
+2026-04-20,PartTimeJob,Cafe shift payment,174.57,income
+2026-04-20,Utilities,Electricity and water,176.04,expense
+2026-04-21,PartTimeJob,Retail part-time shift,159.23,income
+2026-04-21,Transport,Public transport pass,31.26,expense
+2026-04-22,Refunds,Returned item reimbursement,70.39,income
+2026-04-22,Entertainment,Movie tickets,22.01,expense
+2026-04-23,Freelance,Tutoring session payment,576.91,income
+2026-04-23,Entertainment,Museum visit,13.03,expense
+2026-04-24,Freelance,Freelance coding gig,676.01,income
+2026-04-24,Entertainment,Game rental,78.56,expense
+2026-04-25,PartTimeJob,Cafe shift payment,178.80,income
+2026-04-25,Transport,Fuel and parking,53.22,expense
+2026-04-26,PartTimeJob,Retail part-time shift,192.97,income
+2026-04-26,Entertainment,Museum visit,7.32,expense
+2026-04-27,Refunds,Overpayment refund,176.92,income
+2026-04-27,Rent,Rent installment,445.81,expense
+2026-04-28,PartTimeJob,Teaching assistant hours,138.48,income
+2026-04-28,Books,Lab handbook acquisition,111.77,expense
+2026-04-29,Scholarship,Local grant installment,324.96,income
+2026-04-29,Dining,Quick snack combo,56.46,expense
+2026-04-30,Scholarship,Local grant installment,921.99,income
+2026-04-30,Education,Study materials restock,106.14,expense
+2026-05-01,Freelance,Tutoring session payment,673.52,income
+2026-05-01,Dining,Cafe lunch with friends,19.91,expense
+2026-05-02,PartTimeJob,Retail part-time shift,206.87,income
+2026-05-02,Books,Stationery for classes,91.75,expense
+2026-05-03,PartTimeJob,Teaching assistant hours,105.52,income
+2026-05-03,Health,Multivitamins refill,149.89,expense
+2026-05-04,Scholarship,Academic excellence scholarship,1572.85,income
+2026-05-04,Education,Lab materials,16.18,expense
+2026-05-05,Freelance,Tutoring session payment,296.15,income
+2026-05-05,Shopping,Clothing basics purchase,22.77,expense
+2026-05-06,Freelance,Content writing assignment,597.32,income
+2026-05-06,Entertainment,Concert entry,34.93,expense
+2026-05-07,Freelance,Tutoring session payment,250.22,income
+2026-05-07,Transport,Bus tickets,45.17,expense
+2026-05-08,Refunds,Returned item reimbursement,193.13,income
+2026-05-08,Health,Pharmacy essentials,29.34,expense
+2026-05-09,Freelance,Content writing assignment,267.45,income
+2026-05-09,Books,Stationery for classes,128.81,expense
+2026-05-10,Scholarship,Local grant installment,1041.09,income
+2026-05-10,Books,Course books purchase,114.75,expense
+2026-05-11,Scholarship,Merit bonus payout,654.38,income
+2026-05-11,Shopping,Electronics accessory,43.16,expense
+2026-05-12,Scholarship,Local grant installment,291.00,income
+2026-05-12,Rent,Rent installment,703.56,expense
+2026-05-13,Freelance,Content writing assignment,529.10,income
+2026-05-13,Health,Pharmacy essentials,98.10,expense
+2026-05-14,PartTimeJob,Cafe shift payment,131.95,income
+2026-05-14,Rent,Monthly dorm rent,690.57,expense
+2026-05-15,Refunds,Service charge reversal,252.40,income
+2026-05-15,Dining,Quick snack combo,54.08,expense
+2026-05-16,Refunds,Payment refund,138.73,income
+2026-05-16,Utilities,Electricity and water,175.54,expense
+2026-05-17,Scholarship,Semester scholarship disbursement,1181.98,income
+2026-05-17,Books,Lab handbook acquisition,80.65,expense
+2026-05-18,Scholarship,Local grant installment,1796.65,income
+2026-05-18,Utilities,Utility bill payment,174.69,expense
+2026-05-19,PartTimeJob,Teaching assistant hours,145.79,income
+2026-05-19,Education,Lab materials,2.24,expense
+2026-05-20,PartTimeJob,Retail part-time shift,90.63,income
+2026-05-20,Health,Dental care expense,175.19,expense
+2026-05-21,Scholarship,Merit bonus payout,1666.02,income
+2026-05-21,Groceries,Groceries supermarket restock,123.89,expense
+2026-05-22,PartTimeJob,Library weekend shift,193.68,income
+2026-05-22,Dining,Campus dining meal,5.88,expense
+2026-05-23,Refunds,Service charge reversal,197.14,income
+2026-05-23,Shopping,Electronics accessory,130.03,expense
+2026-05-24,Refunds,Returned item reimbursement,30.78,income
+2026-05-24,Groceries,Groceries supermarket restock,32.73,expense
+2026-05-25,PartTimeJob,Retail part-time shift,197.04,income
+2026-05-25,Subscriptions,Online course subscription,10.58,expense
+2026-05-26,Freelance,Content writing assignment,172.66,income
+2026-05-26,Books,Lab handbook acquisition,10.30,expense
+2026-05-27,Freelance,Content writing assignment,411.68,income
+2026-05-27,Transport,Fuel and parking,59.19,expense
+2026-05-28,Scholarship,Local grant installment,994.34,income
+2026-05-28,Subscriptions,Streaming service student plan,22.87,expense
+2026-05-29,PartTimeJob,Library weekend shift,61.59,income
+2026-05-29,Books,Reference book update,54.79,expense
+2026-05-30,Refunds,Payment refund,28.09,income
+2026-05-30,Shopping,Electronics accessory,105.71,expense
+2026-05-31,Refunds,Service charge reversal,95.92,income
+2026-05-31,Dining,Dinner takeaway,22.96,expense
+2026-06-01,Refunds,Overpayment refund,144.17,income
+2026-06-01,Dining,Campus dining meal,59.54,expense
+2026-06-02,Scholarship,Local grant installment,1337.64,income
+2026-06-02,Health,Pharmacy essentials,103.48,expense
+2026-06-03,Freelance,Content writing assignment,689.62,income
+2026-06-03,Subscriptions,Streaming service student plan,36.65,expense
