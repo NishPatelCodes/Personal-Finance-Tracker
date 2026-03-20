@@ -14,12 +14,6 @@
 void  generate_overall_report(char *username){
     char filename[100];
     char line[256];
-    char type[10];
-    char date[11];
-    char category[30];
-    char description[100];
-    float amount;
-    int currentId = 0;
     float totalIncome = 0;
     float totalExpenses = 0;
     float netBalance = 0;
@@ -33,24 +27,17 @@ void  generate_overall_report(char *username){
 
     
     while (fgets(line, sizeof(line), file) != NULL) {
-        char fields[5][100];
-        int pos = 0, col = 0, start = 0;
-    
-        // Split line by commas into 5 fields
-        while (line[pos] != '\0' && line[pos] != '\n' && line[pos] != '\r') {
-            if (line[pos] == ',') {
-                fields[col][pos - start] = '\0';
-                col++;
-                start = pos + 1;
-            } else {
-                fields[col][pos - start] = line[pos];
-            }
-            pos++;
-        }
-        fields[col][pos - start] = '\0';
+        int id = 0;
+        char date[11];
+        char category[30];
+        char description[100];
+        float amount = 0.0f;
+        char type[10];
 
-        float amount = (float)atof(fields[3]);
-        char *type = fields[4];
+        if (sscanf(line, "%d,%10[^,],%29[^,],%99[^,],%f,%9s",
+                   &id, date, category, description, &amount, type) != 6) {
+            continue;
+        }
     
         // compare case-insensitively to \"income\" / \"expense\"
         if (strcmp(type, "income") == 0 || strcmp(type, "Income") == 0) {
@@ -83,26 +70,19 @@ void generate_category_report(char *username, char *category) {
     }
 
     while (fgets(line, sizeof(line), file) != NULL) {
-        char fields[5][100];
-        int pos = 0, col = 0, start = 0;
+        int id = 0;
+        char date[11];
+        char fieldsCategory[30];
+        char description[100];
+        float amount = 0.0f;
+        char type[10];
 
-        // Split line by commas into 5 fields
-        while (line[pos] != '\0' && line[pos] != '\n' && line[pos] != '\r') {
-            if (line[pos] == ',') {
-                fields[col][pos - start] = '\0';
-                col++;
-                start = pos + 1;
-            } else {
-                fields[col][pos - start] = line[pos];
-            }
-            pos++;
+        if (sscanf(line, "%d,%10[^,],%29[^,],%99[^,],%f,%9s",
+                   &id, date, fieldsCategory, description, &amount, type) != 6) {
+            continue;
         }
-        fields[col][pos - start] = '\0';
 
-        // fields[1] = category, fields[3] = amount, fields[4] = type
-        if (strcmp(fields[1], target_category) == 0) {
-            float amount = (float)atof(fields[3]);
-            char *type = fields[4];
+        if (strcmp(fieldsCategory, target_category) == 0) {
 
             if (strcmp(type, "income") == 0 || strcmp(type, "Income") == 0) {
                 totalIncome += amount;

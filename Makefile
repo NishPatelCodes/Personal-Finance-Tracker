@@ -1,8 +1,8 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -pedantic
 
-SRCS = main.c auth.c transactions.c encryption.c reports.c
-OBJS = main.o auth.o transactions.o encryption.o reports.o
+SRCS = main.c auth.c transactions.c transactions_csv.c encryption.c reports.c
+OBJS = main.o auth.o transactions.o transactions_csv.o encryption.o reports.o
 
 
 all: main
@@ -19,6 +19,9 @@ auth.o: auth.c
 
 transactions.o: transactions.c
 	$(CC) $(CFLAGS) -c transactions.c
+
+transactions_csv.o: transactions_csv.c
+	$(CC) $(CFLAGS) -c transactions_csv.c
 
 encryption.o: encryption.c
 	$(CC) $(CFLAGS) -c encryption.c
