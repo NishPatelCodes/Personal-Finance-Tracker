@@ -3,7 +3,7 @@
  * 
  * Handles password encryption and decryption using the Hill Cipher.
  * Uses matrix multiplication with modular arithmetic to encrypt
- * passwords before storing them in users.dat
+ * passwords before storing them in users.txt
  */
 
  // Include necessary headers
@@ -35,6 +35,12 @@ void encrypt_password(char *password, char *output) {
     int len = strlen(password);
     int i, j, k;
 
+    // Convert password to lowercase before encrypting
+    // The Hill Cipher only works with lowercase letters (a=0 to z=25)
+    // Uppercase letters would produce negative numbers when subtracting 'a'
+    for (i = 0; i < len; i++)
+        if (password[i] >= 'A' && password[i] <= 'Z')
+            password[i] = password[i] + 32;
 
     // Checking if the password has an even amount of characters
     // If its even carry on, else if its odd we need to add a letter to ensure its even
@@ -83,17 +89,15 @@ void encrypt_password(char *password, char *output) {
 
 
 
-void  decrypt_password(char *encrypted, char *output){
-    // TODO: Decrypt the encrypted password using the inverse key matrix
-    // Will use mod_inverse() to calculate the inverse of the key matrix
-    // then apply the same matrix multiplication process in reverse
+void decrypt_password(char *encrypted, char *output) {
+    (void)encrypted;    // suppress unused parameter warning — not implemented yet
+    (void)output;       // suppress unused parameter warning — not implemented yet
+    // TODO: implement decryption
 }
 
-
-
-int   mod_inverse(int a, int mod){
-    // TODO: Calculate the modular inverse of a under modulo mod
-    // Used to find the inverse key matrix for decryption
-
+int mod_inverse(int a, int mod) {
+    (void)a;            // suppress unused parameter warning — not implemented yet
+    (void)mod;          // suppress unused parameter warning — not implemented yet
+    // TODO: implement modular inverse
     return 0;
 }

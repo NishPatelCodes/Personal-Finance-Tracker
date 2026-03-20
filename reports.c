@@ -14,12 +14,6 @@
 void  generate_overall_report(char *username){
     char filename[100];
     char line[256];
-    char type[10];
-    char date[11];
-    char category[30];
-    char description[100];
-    float amount;
-    int currentId = 0;
     float totalIncome = 0;
     float totalExpenses = 0;
     float netBalance = 0;

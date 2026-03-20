@@ -54,6 +54,7 @@ void  view_transactions(char *username);
 
 // ---- reports.c functions ----
 void  generate_overall_report(char *username);
+void  generate_category_report(char *username, char *category);
 
 
 // ======================================================
@@ -105,6 +106,7 @@ void print_manage_transactions_menu() {
             // Ask the user for the ID of the transaction to delete
             // The ID corresponds to the line number in the transactions file
             int id;
+            view_transactions(username);
             printf("\nEnter transaction ID to delete: ");
             scanf("%d", &id);
             while (getchar() != '\n'); // flush input buffer after reading int
@@ -218,7 +220,7 @@ void print_reports_menu() {
             generate_overall_report(username);
             break;
 
-        case '2':
+        case '2': {
             // TODO: implement filter_by_category in reports.c
             // filter_by_category(username, category);
             char category[30];
@@ -227,7 +229,8 @@ void print_reports_menu() {
             while (getchar() != '\n');
             generate_category_report(username, category);
             break;
-
+        }
+        
         case '3':
             // TODO: implement export_report in reports.c
             // export_report(username);

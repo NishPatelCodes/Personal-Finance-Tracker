@@ -10,6 +10,8 @@
 #include <stdio.h>
 #include <string.h>
 
+// encrypt_password is defined in encryption.c
+void encrypt_password(char *password, char *output);
 
 // This function checks if a username already exists in users.txt
 // Accepts a pointer to the username string to search for
