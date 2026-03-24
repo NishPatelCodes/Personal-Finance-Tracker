@@ -1,180 +1,180 @@
-2026-01-01,Freelance,Freelance coding gig,374.24,income
-2026-01-01,Shopping,Electronics accessory,51.87,expense
-2026-01-02,Scholarship,Academic excellence scholarship,1686.27,income
-2026-01-02,Subscriptions,Software subscription renewal,55.42,expense
-2026-01-03,Freelance,Freelance coding gig,822.09,income
-2026-01-03,Health,Dental care expense,174.09,expense
-2026-01-04,PartTimeJob,Cafe shift payment,70.55,income
-2026-01-04,Utilities,Utility bill payment,162.06,expense
-2026-01-05,Freelance,Design project payment,652.32,income
-2026-01-05,Utilities,Electricity and water,21.21,expense
-2026-01-06,PartTimeJob,Library weekend shift,178.16,income
-2026-01-06,Health,Pharmacy essentials,48.73,expense
-2026-01-07,Scholarship,Merit bonus payout,1447.86,income
-2026-01-07,Groceries,Weekly groceries campus store,60.02,expense
-2026-01-08,PartTimeJob,Retail part-time shift,99.11,income
-2026-01-08,Rent,Monthly dorm rent,382.98,expense
-2026-01-09,Freelance,Content writing assignment,127.56,income
-2026-01-09,Entertainment,Game rental,107.90,expense
-2026-01-10,Scholarship,Merit bonus payout,618.58,income
-2026-01-10,Subscriptions,Software subscription renewal,43.95,expense
-2026-01-11,Freelance,Tutoring session payment,565.84,income
-2026-01-11,Shopping,Personal care shopping,28.44,expense
-2026-01-12,Scholarship,Semester scholarship disbursement,1608.71,income
-2026-01-12,Dining,Campus dining meal,29.49,expense
-2026-01-13,Scholarship,Semester scholarship disbursement,438.04,income
-2026-01-13,Entertainment,Museum visit,118.09,expense
-2026-01-14,Freelance,Tutoring session payment,202.46,income
-2026-01-14,Subscriptions,Cloud storage renewal,21.28,expense
-2026-01-15,Scholarship,Merit bonus payout,1791.09,income
-2026-01-15,Shopping,Personal care shopping,144.29,expense
-2026-01-16,Scholarship,Local grant installment,363.56,income
-2026-01-16,Groceries,Market produce purchase,65.44,expense
-2026-01-17,Freelance,Design project payment,614.70,income
-2026-01-17,Groceries,Pantry supplies top up,33.25,expense
-2026-01-18,PartTimeJob,Cafe shift payment,177.63,income
-2026-01-18,Subscriptions,Cloud storage renewal,11.34,expense
-2026-01-19,Refunds,Overpayment refund,137.22,income
-2026-01-19,Transport,Fuel and parking,78.54,expense
-2026-01-20,Freelance,Freelance coding gig,205.34,income
-2026-01-20,Utilities,Utility bill payment,166.12,expense
-2026-01-21,Scholarship,Semester scholarship disbursement,1488.47,income
-2026-01-21,Transport,Ride share to campus,52.09,expense
-2026-01-22,PartTimeJob,Cafe shift payment,138.36,income
-2026-01-22,Entertainment,Movie tickets,67.19,expense
-2026-01-23,PartTimeJob,Library weekend shift,149.74,income
-2026-01-23,Rent,Monthly dorm rent,540.72,expense
-2026-01-24,Freelance,Tutoring session payment,810.06,income
-2026-01-24,Shopping,Household supplies,205.07,expense
-2026-01-25,Scholarship,Academic excellence scholarship,1319.90,income
-2026-01-25,Transport,Ride share to campus,54.64,expense
-2026-01-26,Scholarship,Merit bonus payout,1200.17,income
-2026-01-26,Entertainment,Movie tickets,90.62,expense
-2026-01-27,PartTimeJob,Cafe shift payment,130.62,income
-2026-01-27,Groceries,Weekly groceries campus store,96.12,expense
-2026-01-28,Freelance,Content writing assignment,328.74,income
-2026-01-28,Education,Workshop participation,67.30,expense
-2026-01-29,PartTimeJob,Teaching assistant hours,195.43,income
-2026-01-29,Books,Reference book update,47.39,expense
-2026-01-30,Refunds,Overpayment refund,53.37,income
-2026-01-30,Shopping,Household supplies,185.82,expense
-2026-01-31,Refunds,Payment refund,118.30,income
-2026-01-31,Shopping,Clothing basics purchase,135.11,expense
-2026-02-01,Refunds,Returned item reimbursement,110.31,income
-2026-02-01,Entertainment,Concert entry,13.78,expense
-2026-02-02,Scholarship,Merit bonus payout,793.80,income
-2026-02-02,Utilities,Electricity and water,27.25,expense
-2026-02-03,Freelance,Freelance coding gig,785.21,income
-2026-02-03,Groceries,Pantry supplies top up,37.90,expense
-2026-02-04,Freelance,Tutoring session payment,679.66,income
-2026-02-04,Utilities,Utility bill payment,157.03,expense
-2026-02-05,Freelance,Design project payment,190.46,income
-2026-02-05,Books,Lab handbook acquisition,135.97,expense
-2026-02-06,Scholarship,Academic excellence scholarship,863.81,income
-2026-02-06,Dining,Campus dining meal,23.99,expense
-2026-02-07,Scholarship,Merit bonus payout,1474.76,income
-2026-02-07,Entertainment,Game rental,43.62,expense
-2026-02-08,Refunds,Returned item reimbursement,38.74,income
-2026-02-08,Rent,Monthly dorm rent,647.85,expense
-2026-02-09,Scholarship,Local grant installment,683.16,income
-2026-02-09,Utilities,Electricity and water,188.79,expense
-2026-02-10,Refunds,Returned item reimbursement,178.69,income
-2026-02-10,Books,Course books purchase,37.85,expense
-2026-02-11,Refunds,Returned item reimbursement,34.40,income
-2026-02-11,Health,Pharmacy essentials,80.27,expense
-2026-02-12,Freelance,Freelance coding gig,299.90,income
-2026-02-12,Subscriptions,Online course subscription,29.55,expense
-2026-02-13,PartTimeJob,Retail part-time shift,85.56,income
-2026-02-13,Health,Doctor visit copay,53.91,expense
-2026-02-14,Freelance,Tutoring session payment,398.29,income
-2026-02-14,Utilities,Mobile top up,121.51,expense
-2026-02-15,Freelance,Content writing assignment,577.24,income
-2026-02-15,Subscriptions,Cloud storage renewal,27.17,expense
-2026-02-16,Freelance,Tutoring session payment,341.36,income
-2026-02-16,Books,Stationery for classes,133.03,expense
-2026-02-17,PartTimeJob,Teaching assistant hours,122.27,income
-2026-02-17,Dining,Cafe lunch with friends,5.61,expense
-2026-02-18,Freelance,Tutoring session payment,727.06,income
-2026-02-18,Shopping,Electronics accessory,46.90,expense
-2026-02-19,Refunds,Returned item reimbursement,91.25,income
-2026-02-19,Health,Dental care expense,118.21,expense
-2026-02-20,Refunds,Returned item reimbursement,259.75,income
-2026-02-20,Subscriptions,Cloud storage renewal,25.46,expense
-2026-02-21,Refunds,Payment refund,102.33,income
-2026-02-21,Shopping,Electronics accessory,83.54,expense
-2026-02-22,Scholarship,Academic excellence scholarship,571.53,income
-2026-02-22,Transport,Public transport pass,69.04,expense
-2026-02-23,Refunds,Payment refund,69.44,income
-2026-02-23,Utilities,Utility bill payment,198.23,expense
-2026-02-24,Refunds,Service charge reversal,238.00,income
-2026-02-24,Health,Multivitamins refill,38.39,expense
-2026-02-25,Scholarship,Merit bonus payout,1291.10,income
-2026-02-25,Dining,Quick snack combo,8.21,expense
-2026-02-26,Refunds,Service charge reversal,234.20,income
-2026-02-26,Rent,Rent installment,351.18,expense
-2026-02-27,Freelance,Tutoring session payment,716.97,income
-2026-02-27,Health,Multivitamins refill,31.82,expense
-2026-02-28,Refunds,Returned item reimbursement,125.95,income
-2026-02-28,Subscriptions,Software subscription renewal,60.26,expense
-2026-03-01,PartTimeJob,Teaching assistant hours,204.26,income
-2026-03-01,Rent,Late rent adjustment,689.25,expense
-2026-03-02,PartTimeJob,Library weekend shift,150.55,income
-2026-03-02,Groceries,Pantry supplies top up,83.31,expense
-2026-03-03,Freelance,Design project payment,221.79,income
-2026-03-03,Groceries,Groceries supermarket restock,60.02,expense
-2026-03-04,Refunds,Service charge reversal,78.49,income
-2026-03-04,Groceries,Market produce purchase,31.77,expense
-2026-03-05,Scholarship,Merit bonus payout,388.14,income
-2026-03-05,Entertainment,Game rental,16.05,expense
-2026-03-06,Freelance,Tutoring session payment,770.46,income
-2026-03-06,Entertainment,Movie tickets,13.84,expense
-2026-03-07,Scholarship,Academic excellence scholarship,473.09,income
-2026-03-07,Rent,Late rent adjustment,459.22,expense
-2026-03-08,Freelance,Tutoring session payment,839.10,income
-2026-03-08,Utilities,Mobile top up,56.14,expense
-2026-03-09,Scholarship,Academic excellence scholarship,727.34,income
-2026-03-09,Groceries,Market produce purchase,109.01,expense
-2026-03-10,Freelance,Design project payment,874.41,income
-2026-03-10,Entertainment,Museum visit,34.19,expense
-2026-03-11,Refunds,Returned item reimbursement,30.01,income
-2026-03-11,Subscriptions,Software subscription renewal,16.88,expense
-2026-03-12,Freelance,Content writing assignment,351.67,income
-2026-03-12,Rent,Rent installment,444.38,expense
-2026-03-13,Scholarship,Academic excellence scholarship,663.86,income
-2026-03-13,Shopping,Clothing basics purchase,19.68,expense
-2026-03-14,Scholarship,Academic excellence scholarship,1338.39,income
-2026-03-14,Shopping,Clothing basics purchase,116.96,expense
-2026-03-15,Refunds,Returned item reimbursement,225.51,income
-2026-03-15,Transport,Public transport pass,77.03,expense
-2026-03-16,Scholarship,Merit bonus payout,495.05,income
-2026-03-16,Shopping,Personal care shopping,189.30,expense
-2026-03-17,PartTimeJob,Cafe shift payment,83.62,income
-2026-03-17,Dining,Quick snack combo,49.32,expense
-2026-03-18,Refunds,Service charge reversal,246.31,income
-2026-03-18,Education,Lab materials,102.06,expense
-2026-03-19,PartTimeJob,Teaching assistant hours,188.66,income
-2026-03-19,Education,Study materials restock,104.63,expense
-2026-03-20,Freelance,Content writing assignment,867.79,income
-2026-03-20,Subscriptions,Cloud storage renewal,56.82,expense
-2026-03-21,PartTimeJob,Library weekend shift,170.71,income
-2026-03-21,Health,Dental care expense,101.94,expense
-2026-03-22,Scholarship,Merit bonus payout,1151.66,income
-2026-03-22,Health,Multivitamins refill,85.28,expense
-2026-03-23,Refunds,Overpayment refund,72.18,income
-2026-03-23,Shopping,Electronics accessory,160.57,expense
-2026-03-24,Freelance,Content writing assignment,572.58,income
-2026-03-24,Rent,Rent installment,512.51,expense
-2026-03-25,Scholarship,Semester scholarship disbursement,1360.98,income
-2026-03-25,Utilities,Internet usage charge,71.19,expense
-2026-03-26,Refunds,Service charge reversal,120.70,income
-2026-03-26,Utilities,Internet usage charge,62.17,expense
-2026-03-27,Scholarship,Merit bonus payout,325.92,income
-2026-03-27,Health,Dental care expense,137.17,expense
-2026-03-28,PartTimeJob,Retail part-time shift,83.61,income
-2026-03-28,Utilities,Utility bill payment,45.17,expense
-2026-03-29,Freelance,Tutoring session payment,142.69,income
-2026-03-29,Transport,Fuel and parking,77.87,expense
-2026-03-30,Scholarship,Merit bonus payout,1165.87,income
-2026-03-30,Transport,Bus tickets,66.19,expense
-2026-03-31,Refunds,Service charge reversal,243.86,income
-2026-03-31,Transport,Bus tickets,70.28,expense
+2026-01-01,Scholarship,Winter scholarship disbursement,1200.00,income
+2026-01-01,Rent,January dorm rent,600.00,expense
+2026-01-02,Groceries,Weekly groceries campus store,45.32,expense
+2026-01-02,Transport,Bus pass top up,25.00,expense
+2026-01-03,PartTimeJob,Cafe shift payment,80.00,income
+2026-01-03,Coffee,Study session coffee,4.75,expense
+2026-01-04,Books,Second hand textbook math,35.00,expense
+2026-01-04,Snacks,Vending machine snacks,3.20,expense
+2026-01-05,PartTimeJob,Cafe shift payment,76.50,income
+2026-01-05,Entertainment,Movie night campus,12.00,expense
+2026-01-06,Groceries,Weekly groceries discount store,39.80,expense
+2026-01-06,Printing,Print lecture notes,2.50,expense
+2026-01-07,Scholarship,Local grant installment,300.00,income
+2026-01-07,Transport,Ride share to campus,8.60,expense
+2026-01-08,Rent,Utilities internet share,30.00,expense
+2026-01-08,Coffee,Morning latte,3.95,expense
+2026-01-09,PartTimeJob,Cafe shift payment,82.75,income
+2026-01-09,Food,Late night pizza with friends,14.99,expense
+2026-01-10,Groceries,Weekly groceries supermarket,47.10,expense
+2026-01-10,Health,Pharmacy cold medicine,9.99,expense
+2026-01-11,Transport,Bus tickets,12.00,expense
+2026-01-11,Entertainment,Board game cafe,10.00,expense
+2026-01-12,PartTimeJob,Extra weekend shift,95.20,income
+2026-01-12,Snacks,Campus cafe muffin,3.50,expense
+2026-01-13,StudyMaterials,Highlighters and pens,6.40,expense
+2026-01-13,Coffee,Iced coffee between classes,4.10,expense
+2026-01-14,Groceries,Weekly groceries,42.75,expense
+2026-01-14,Transport,Ride share home,7.80,expense
+2026-01-15,Rent,Mid month utilities,28.00,expense
+2026-01-15,PartTimeJob,Cafe shift payment,78.60,income
+2026-01-16,Subscriptions,Music streaming student plan,5.99,expense
+2026-01-16,Food,Cafeteria lunch,7.50,expense
+2026-01-17,Groceries,Top up groceries,22.30,expense
+2026-01-17,Entertainment,Streaming movie,5.00,expense
+2026-01-18,PartTimeJob,Cafe shift payment,81.40,income
+2026-01-18,Coffee,Study group coffee,6.25,expense
+2026-01-19,Transport,Bus pass renewal,30.00,expense
+2026-01-19,Snacks,Chips and soda,4.20,expense
+2026-01-20,Groceries,Weekly groceries,44.18,expense
+2026-01-20,Health,Multivitamins,12.99,expense
+2026-01-21,Scholarship,Merit bonus,150.00,income
+2026-01-21,Books,Used programming book,28.00,expense
+2026-01-22,PartTimeJob,Cafe shift payment,79.10,income
+2026-01-22,Entertainment,Campus concert ticket,15.00,expense
+2026-01-23,Groceries,Weekly groceries,41.90,expense
+2026-01-23,Coffee,Latte between labs,4.50,expense
+2026-01-24,Transport,Ride share late night,9.70,expense
+2026-01-24,Food,Burger place dinner,13.80,expense
+2026-01-25,PartTimeJob,Cafe shift payment,83.25,income
+2026-01-25,Subscriptions,Cloud storage student,1.99,expense
+2026-01-26,Groceries,Top up groceries,19.45,expense
+2026-01-26,Snacks,Chocolate bar,2.20,expense
+2026-01-27,Rent,End of month utilities,32.00,expense
+2026-01-27,Entertainment,Arcade night,11.00,expense
+2026-01-28,PartTimeJob,Cafe shift payment,77.80,income
+2026-01-28,Coffee,Flat white,4.30,expense
+2026-01-29,Groceries,Weekly groceries,46.05,expense
+2026-01-29,StudyMaterials,Notebook and binder,9.60,expense
+2026-01-30,Transport,Bus tickets,10.00,expense
+2026-01-30,Food,Campus lunch,6.90,expense
+2026-01-31,PartTimeJob,Cafe shift payment,80.90,income
+2026-01-31,Entertainment,Game rental,7.50,expense
+2026-02-01,Scholarship,Spring scholarship disbursement,1200.00,income
+2026-02-01,Rent,February dorm rent,600.00,expense
+2026-02-02,Groceries,Weekly groceries campus store,48.20,expense
+2026-02-02,Transport,Bus pass top up,25.00,expense
+2026-02-03,PartTimeJob,Cafe shift payment,82.30,income
+2026-02-03,Coffee,Study session coffee,4.80,expense
+2026-02-04,Books,Lab manual purchase,24.50,expense
+2026-02-04,Snacks,Vending machine snacks,3.10,expense
+2026-02-05,PartTimeJob,Cafe shift payment,79.40,income
+2026-02-05,Entertainment,Movie night campus,11.50,expense
+2026-02-06,Groceries,Weekly groceries discount store,43.70,expense
+2026-02-06,Printing,Print project report,3.20,expense
+2026-02-07,Scholarship,Local grant installment,300.00,income
+2026-02-07,Transport,Ride share to campus,9.10,expense
+2026-02-08,Rent,Utilities internet share,30.00,expense
+2026-02-08,Coffee,Morning latte,3.95,expense
+2026-02-09,PartTimeJob,Cafe shift payment,83.10,income
+2026-02-09,Food,Late night noodles,9.50,expense
+2026-02-10,Groceries,Weekly groceries,45.65,expense
+2026-02-10,Health,Pharmacy allergy pills,13.49,expense
+2026-02-11,Transport,Bus tickets,12.00,expense
+2026-02-11,Entertainment,Board game cafe,9.50,expense
+2026-02-12,PartTimeJob,Extra weekend shift,96.80,income
+2026-02-12,Snacks,Campus cafe muffin,3.60,expense
+2026-02-13,StudyMaterials,Highlighters and index cards,7.20,expense
+2026-02-13,Coffee,Iced coffee between classes,4.30,expense
+2026-02-14,Groceries,Weekly groceries,44.40,expense
+2026-02-14,Transport,Ride share home,8.10,expense
+2026-02-15,Rent,Mid month utilities,28.00,expense
+2026-02-15,PartTimeJob,Cafe shift payment,80.50,income
+2026-02-16,Subscriptions,Music streaming student plan,5.99,expense
+2026-02-16,Food,Cafeteria lunch,7.80,expense
+2026-02-17,Groceries,Top up groceries,20.15,expense
+2026-02-17,Entertainment,Streaming movie,4.50,expense
+2026-02-18,PartTimeJob,Cafe shift payment,82.90,income
+2026-02-18,Coffee,Study group coffee,6.40,expense
+2026-02-19,Transport,Bus pass renewal,30.00,expense
+2026-02-19,Snacks,Chips and soda,4.10,expense
+2026-02-20,Groceries,Weekly groceries,47.25,expense
+2026-02-20,Health,Multivitamins,13.99,expense
+2026-02-21,Scholarship,Merit bonus,150.00,income
+2026-02-21,Books,Used statistics book,27.00,expense
+2026-02-22,PartTimeJob,Cafe shift payment,81.30,income
+2026-02-22,Entertainment,Campus comedy show,12.00,expense
+2026-02-23,Groceries,Weekly groceries,42.35,expense
+2026-02-23,Coffee,Latte between labs,4.45,expense
+2026-02-24,Transport,Ride share late night,9.90,expense
+2026-02-24,Food,Burger place dinner,14.20,expense
+2026-02-25,PartTimeJob,Cafe shift payment,84.00,income
+2026-02-25,Subscriptions,Cloud storage student,1.99,expense
+2026-02-26,Groceries,Top up groceries,21.70,expense
+2026-02-26,Snacks,Chocolate bar,2.30,expense
+2026-02-27,Rent,End of month utilities,32.00,expense
+2026-02-27,Entertainment,Arcade night,10.50,expense
+2026-02-28,PartTimeJob,Cafe shift payment,78.90,income
+2026-02-28,Coffee,Flat white,4.25,expense
+2026-03-01,Scholarship,Spring bonus,300.00,income
+2026-03-01,Rent,March dorm rent,600.00,expense
+2026-03-02,Groceries,Weekly groceries campus store,49.80,expense
+2026-03-02,Transport,Bus pass top up,25.00,expense
+2026-03-03,PartTimeJob,Cafe shift payment,83.40,income
+2026-03-03,Coffee,Study session coffee,4.90,expense
+2026-03-04,Books,Programming reference guide,29.50,expense
+2026-03-04,Snacks,Vending machine snacks,3.15,expense
+2026-03-05,PartTimeJob,Cafe shift payment,80.70,income
+2026-03-05,Entertainment,Movie night campus,11.75,expense
+2026-03-06,Groceries,Weekly groceries discount store,44.90,expense
+2026-03-06,Printing,Print lab report,2.90,expense
+2026-03-07,Scholarship,Local grant installment,300.00,income
+2026-03-07,Transport,Ride share to campus,9.30,expense
+2026-03-08,Rent,Utilities internet share,30.00,expense
+2026-03-08,Coffee,Morning latte,3.95,expense
+2026-03-09,PartTimeJob,Cafe shift payment,82.60,income
+2026-03-09,Food,Late night pizza,11.20,expense
+2026-03-10,Groceries,Weekly groceries,46.10,expense
+2026-03-10,Health,Pharmacy pain relief,8.99,expense
+2026-03-11,Transport,Bus tickets,12.00,expense
+2026-03-11,Entertainment,Board game cafe,9.75,expense
+2026-03-12,PartTimeJob,Extra weekend shift,97.40,income
+2026-03-12,Snacks,Campus cafe muffin,3.70,expense
+2026-03-13,StudyMaterials,Index cards and sticky notes,6.90,expense
+2026-03-13,Coffee,Iced coffee between classes,4.35,expense
+2026-03-14,Groceries,Weekly groceries,45.90,expense
+2026-03-14,Transport,Ride share home,8.30,expense
+2026-03-15,Rent,Mid month utilities,28.00,expense
+2026-03-15,PartTimeJob,Cafe shift payment,81.50,income
+2026-03-16,Subscriptions,Music streaming student plan,5.99,expense
+2026-03-16,Food,Cafeteria lunch,7.95,expense
+2026-03-17,Groceries,Top up groceries,23.40,expense
+2026-03-17,Entertainment,Streaming movie,4.80,expense
+2026-03-18,PartTimeJob,Cafe shift payment,83.20,income
+2026-03-18,Coffee,Study group coffee,6.60,expense
+2026-03-19,Transport,Bus pass renewal,30.00,expense
+2026-03-19,Snacks,Chips and soda,4.30,expense
+2026-03-20,Groceries,Weekly groceries,47.80,expense
+2026-03-20,Health,Multivitamins,13.99,expense
+2026-03-21,Scholarship,Merit bonus,150.00,income
+2026-03-21,Books,Used database book,26.00,expense
+2026-03-22,PartTimeJob,Cafe shift payment,82.10,income
+2026-03-22,Entertainment,Campus concert ticket,14.00,expense
+2026-03-23,Groceries,Weekly groceries,43.10,expense
+2026-03-23,Coffee,Latte between labs,4.55,expense
+2026-03-24,Transport,Ride share late night,10.10,expense
+2026-03-24,Food,Burger place dinner,14.60,expense
+2026-03-25,PartTimeJob,Cafe shift payment,85.00,income
+2026-03-25,Subscriptions,Cloud storage student,1.99,expense
+2026-03-26,Groceries,Top up groceries,22.80,expense
+2026-03-26,Snacks,Chocolate bar,2.40,expense
+2026-03-27,Rent,End of month utilities,32.00,expense
+2026-03-27,Entertainment,Arcade night,10.80,expense
+2026-03-28,PartTimeJob,Cafe shift payment,79.50,income
+2026-03-28,Coffee,Flat white,4.35,expense
+2026-03-29,Groceries,Weekly groceries,48.20,expense
+2026-03-29,StudyMaterials,Notebook and binder,9.90,expense
+2026-03-30,Transport,Bus tickets,10.00,expense
+2026-03-30,Food,Campus lunch,7.10,expense
+2026-03-31,PartTimeJob,Cafe shift payment,81.90,income
+2020-03-20,gas,Had to fill up the tank,67.69,expense
