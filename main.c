@@ -54,6 +54,10 @@ void  view_transactions(char *username);
 // ---- reports.c functions ----
 void  generate_overall_report(char *username);
 void  generate_category_report(char *username, char *category);
+void  export_report_to_txt(char *username);
+void  search_by_date(char *username, char *date);
+void  filter_by_category(char *username, char *category);
+void  filter_by_type(char *username, char *filterType);
 
 
 // ======================================================
@@ -167,20 +171,32 @@ void print_search_filter_menu() {
 
     switch (menuSearchFilterChoice) {
 
-        case '1':
-            // TODO: implement search_by_date in reports.c
-            // search_by_date(username, date);
+        case '1': {
+            char searchDate[11];
+            printf("Enter date (YYYY-MM-DD): ");
+            scanf("%10s", searchDate);
+            while (getchar() != '\n');
+            search_by_date(username, searchDate);
             break;
+        }
 
-        case '2':
-            // TODO: implement filter_by_category in reports.c
-            // filter_by_category(username, category);
+        case '2': {
+            char category[30];
+            printf("Enter category (exact match, e.g. Groceries): ");
+            scanf("%29s", category);
+            while (getchar() != '\n');
+            filter_by_category(username, category);
             break;
+        }
 
-        case '3':
-            // TODO: implement filter_by_type in reports.c
-            // filter_by_type(username, type);
+        case '3': {
+            char t[10];
+            printf("Enter type (income or expense): ");
+            scanf("%9s", t);
+            while (getchar() != '\n');
+            filter_by_type(username, t);
             break;
+        }
 
         case '4':
             // Return exits this function and goes back to the while loop in main()
@@ -232,8 +248,7 @@ void print_reports_menu() {
         }
 
         case '3':
-            // TODO: implement export_report in reports.c
-            // export_report(username);
+            export_report_to_txt(username);
             break;
 
         case '4':
