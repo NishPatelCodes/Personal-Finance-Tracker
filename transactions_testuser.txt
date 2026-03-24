@@ -1,180 +1,180 @@
-2026-01-01,Scholarship,Winter scholarship disbursement,1200.00,income
-2026-01-01,Rent,January dorm rent,600.00,expense
-2026-01-02,Groceries,Weekly groceries campus store,45.32,expense
-2026-01-02,Transport,Bus pass top up,25.00,expense
-2026-01-03,PartTimeJob,Cafe shift payment,80.00,income
-2026-01-03,Coffee,Study session coffee,4.75,expense
-2026-01-04,Books,Second hand textbook math,35.00,expense
-2026-01-04,Snacks,Vending machine snacks,3.20,expense
-2026-01-05,PartTimeJob,Cafe shift payment,76.50,income
-2026-01-05,Entertainment,Movie night campus,12.00,expense
-2026-01-06,Groceries,Weekly groceries discount store,39.80,expense
-2026-01-06,Printing,Print lecture notes,2.50,expense
-2026-01-07,Scholarship,Local grant installment,300.00,income
-2026-01-07,Transport,Ride share to campus,8.60,expense
-2026-01-08,Rent,Utilities internet share,30.00,expense
-2026-01-08,Coffee,Morning latte,3.95,expense
-2026-01-09,PartTimeJob,Cafe shift payment,82.75,income
-2026-01-09,Food,Late night pizza with friends,14.99,expense
-2026-01-10,Groceries,Weekly groceries supermarket,47.10,expense
-2026-01-10,Health,Pharmacy cold medicine,9.99,expense
-2026-01-11,Transport,Bus tickets,12.00,expense
-2026-01-11,Entertainment,Board game cafe,10.00,expense
-2026-01-12,PartTimeJob,Extra weekend shift,95.20,income
-2026-01-12,Snacks,Campus cafe muffin,3.50,expense
-2026-01-13,StudyMaterials,Highlighters and pens,6.40,expense
-2026-01-13,Coffee,Iced coffee between classes,4.10,expense
-2026-01-14,Groceries,Weekly groceries,42.75,expense
-2026-01-14,Transport,Ride share home,7.80,expense
-2026-01-15,Rent,Mid month utilities,28.00,expense
-2026-01-15,PartTimeJob,Cafe shift payment,78.60,income
-2026-01-16,Subscriptions,Music streaming student plan,5.99,expense
-2026-01-16,Food,Cafeteria lunch,7.50,expense
-2026-01-17,Groceries,Top up groceries,22.30,expense
-2026-01-17,Entertainment,Streaming movie,5.00,expense
-2026-01-18,PartTimeJob,Cafe shift payment,81.40,income
-2026-01-18,Coffee,Study group coffee,6.25,expense
-2026-01-19,Transport,Bus pass renewal,30.00,expense
-2026-01-19,Snacks,Chips and soda,4.20,expense
-2026-01-20,Groceries,Weekly groceries,44.18,expense
-2026-01-20,Health,Multivitamins,12.99,expense
-2026-01-21,Scholarship,Merit bonus,150.00,income
-2026-01-21,Books,Used programming book,28.00,expense
-2026-01-22,PartTimeJob,Cafe shift payment,79.10,income
-2026-01-22,Entertainment,Campus concert ticket,15.00,expense
-2026-01-23,Groceries,Weekly groceries,41.90,expense
-2026-01-23,Coffee,Latte between labs,4.50,expense
-2026-01-24,Transport,Ride share late night,9.70,expense
-2026-01-24,Food,Burger place dinner,13.80,expense
-2026-01-25,PartTimeJob,Cafe shift payment,83.25,income
-2026-01-25,Subscriptions,Cloud storage student,1.99,expense
-2026-01-26,Groceries,Top up groceries,19.45,expense
-2026-01-26,Snacks,Chocolate bar,2.20,expense
-2026-01-27,Rent,End of month utilities,32.00,expense
-2026-01-27,Entertainment,Arcade night,11.00,expense
-2026-01-28,PartTimeJob,Cafe shift payment,77.80,income
-2026-01-28,Coffee,Flat white,4.30,expense
-2026-01-29,Groceries,Weekly groceries,46.05,expense
-2026-01-29,StudyMaterials,Notebook and binder,9.60,expense
-2026-01-30,Transport,Bus tickets,10.00,expense
-2026-01-30,Food,Campus lunch,6.90,expense
-2026-01-31,PartTimeJob,Cafe shift payment,80.90,income
-2026-01-31,Entertainment,Game rental,7.50,expense
-2026-02-01,Scholarship,Spring scholarship disbursement,1200.00,income
-2026-02-01,Rent,February dorm rent,600.00,expense
-2026-02-02,Groceries,Weekly groceries campus store,48.20,expense
-2026-02-02,Transport,Bus pass top up,25.00,expense
-2026-02-03,PartTimeJob,Cafe shift payment,82.30,income
-2026-02-03,Coffee,Study session coffee,4.80,expense
-2026-02-04,Books,Lab manual purchase,24.50,expense
-2026-02-04,Snacks,Vending machine snacks,3.10,expense
-2026-02-05,PartTimeJob,Cafe shift payment,79.40,income
-2026-02-05,Entertainment,Movie night campus,11.50,expense
-2026-02-06,Groceries,Weekly groceries discount store,43.70,expense
-2026-02-06,Printing,Print project report,3.20,expense
-2026-02-07,Scholarship,Local grant installment,300.00,income
-2026-02-07,Transport,Ride share to campus,9.10,expense
-2026-02-08,Rent,Utilities internet share,30.00,expense
-2026-02-08,Coffee,Morning latte,3.95,expense
-2026-02-09,PartTimeJob,Cafe shift payment,83.10,income
-2026-02-09,Food,Late night noodles,9.50,expense
-2026-02-10,Groceries,Weekly groceries,45.65,expense
-2026-02-10,Health,Pharmacy allergy pills,13.49,expense
-2026-02-11,Transport,Bus tickets,12.00,expense
-2026-02-11,Entertainment,Board game cafe,9.50,expense
-2026-02-12,PartTimeJob,Extra weekend shift,96.80,income
-2026-02-12,Snacks,Campus cafe muffin,3.60,expense
-2026-02-13,StudyMaterials,Highlighters and index cards,7.20,expense
-2026-02-13,Coffee,Iced coffee between classes,4.30,expense
-2026-02-14,Groceries,Weekly groceries,44.40,expense
-2026-02-14,Transport,Ride share home,8.10,expense
-2026-02-15,Rent,Mid month utilities,28.00,expense
-2026-02-15,PartTimeJob,Cafe shift payment,80.50,income
-2026-02-16,Subscriptions,Music streaming student plan,5.99,expense
-2026-02-16,Food,Cafeteria lunch,7.80,expense
-2026-02-17,Groceries,Top up groceries,20.15,expense
-2026-02-17,Entertainment,Streaming movie,4.50,expense
-2026-02-18,PartTimeJob,Cafe shift payment,82.90,income
-2026-02-18,Coffee,Study group coffee,6.40,expense
-2026-02-19,Transport,Bus pass renewal,30.00,expense
-2026-02-19,Snacks,Chips and soda,4.10,expense
-2026-02-20,Groceries,Weekly groceries,47.25,expense
-2026-02-20,Health,Multivitamins,13.99,expense
-2026-02-21,Scholarship,Merit bonus,150.00,income
-2026-02-21,Books,Used statistics book,27.00,expense
-2026-02-22,PartTimeJob,Cafe shift payment,81.30,income
-2026-02-22,Entertainment,Campus comedy show,12.00,expense
-2026-02-23,Groceries,Weekly groceries,42.35,expense
-2026-02-23,Coffee,Latte between labs,4.45,expense
-2026-02-24,Transport,Ride share late night,9.90,expense
-2026-02-24,Food,Burger place dinner,14.20,expense
-2026-02-25,PartTimeJob,Cafe shift payment,84.00,income
-2026-02-25,Subscriptions,Cloud storage student,1.99,expense
-2026-02-26,Groceries,Top up groceries,21.70,expense
-2026-02-26,Snacks,Chocolate bar,2.30,expense
-2026-02-27,Rent,End of month utilities,32.00,expense
-2026-02-27,Entertainment,Arcade night,10.50,expense
-2026-02-28,PartTimeJob,Cafe shift payment,78.90,income
-2026-02-28,Coffee,Flat white,4.25,expense
-2026-03-01,Scholarship,Spring bonus,300.00,income
-2026-03-01,Rent,March dorm rent,600.00,expense
-2026-03-02,Groceries,Weekly groceries campus store,49.80,expense
-2026-03-02,Transport,Bus pass top up,25.00,expense
-2026-03-03,PartTimeJob,Cafe shift payment,83.40,income
-2026-03-03,Coffee,Study session coffee,4.90,expense
-2026-03-04,Books,Programming reference guide,29.50,expense
-2026-03-04,Snacks,Vending machine snacks,3.15,expense
-2026-03-05,PartTimeJob,Cafe shift payment,80.70,income
-2026-03-05,Entertainment,Movie night campus,11.75,expense
-2026-03-06,Groceries,Weekly groceries discount store,44.90,expense
-2026-03-06,Printing,Print lab report,2.90,expense
-2026-03-07,Scholarship,Local grant installment,300.00,income
-2026-03-07,Transport,Ride share to campus,9.30,expense
-2026-03-08,Rent,Utilities internet share,30.00,expense
-2026-03-08,Coffee,Morning latte,3.95,expense
-2026-03-09,PartTimeJob,Cafe shift payment,82.60,income
-2026-03-09,Food,Late night pizza,11.20,expense
-2026-03-10,Groceries,Weekly groceries,46.10,expense
-2026-03-10,Health,Pharmacy pain relief,8.99,expense
-2026-03-11,Transport,Bus tickets,12.00,expense
-2026-03-11,Entertainment,Board game cafe,9.75,expense
-2026-03-12,PartTimeJob,Extra weekend shift,97.40,income
-2026-03-12,Snacks,Campus cafe muffin,3.70,expense
-2026-03-13,StudyMaterials,Index cards and sticky notes,6.90,expense
-2026-03-13,Coffee,Iced coffee between classes,4.35,expense
-2026-03-14,Groceries,Weekly groceries,45.90,expense
-2026-03-14,Transport,Ride share home,8.30,expense
-2026-03-15,Rent,Mid month utilities,28.00,expense
-2026-03-15,PartTimeJob,Cafe shift payment,81.50,income
-2026-03-16,Subscriptions,Music streaming student plan,5.99,expense
-2026-03-16,Food,Cafeteria lunch,7.95,expense
-2026-03-17,Groceries,Top up groceries,23.40,expense
-2026-03-17,Entertainment,Streaming movie,4.80,expense
-2026-03-18,PartTimeJob,Cafe shift payment,83.20,income
-2026-03-18,Coffee,Study group coffee,6.60,expense
-2026-03-19,Transport,Bus pass renewal,30.00,expense
-2026-03-19,Snacks,Chips and soda,4.30,expense
-2026-03-20,Groceries,Weekly groceries,47.80,expense
-2026-03-20,Health,Multivitamins,13.99,expense
-2026-03-21,Scholarship,Merit bonus,150.00,income
-2026-03-21,Books,Used database book,26.00,expense
-2026-03-22,PartTimeJob,Cafe shift payment,82.10,income
-2026-03-22,Entertainment,Campus concert ticket,14.00,expense
-2026-03-23,Groceries,Weekly groceries,43.10,expense
-2026-03-23,Coffee,Latte between labs,4.55,expense
-2026-03-24,Transport,Ride share late night,10.10,expense
-2026-03-24,Food,Burger place dinner,14.60,expense
-2026-03-25,PartTimeJob,Cafe shift payment,85.00,income
-2026-03-25,Subscriptions,Cloud storage student,1.99,expense
-2026-03-26,Groceries,Top up groceries,22.80,expense
-2026-03-26,Snacks,Chocolate bar,2.40,expense
-2026-03-27,Rent,End of month utilities,32.00,expense
-2026-03-27,Entertainment,Arcade night,10.80,expense
-2026-03-28,PartTimeJob,Cafe shift payment,79.50,income
-2026-03-28,Coffee,Flat white,4.35,expense
-2026-03-29,Groceries,Weekly groceries,48.20,expense
-2026-03-29,StudyMaterials,Notebook and binder,9.90,expense
-2026-03-30,Transport,Bus tickets,10.00,expense
-2026-03-30,Food,Campus lunch,7.10,expense
-2026-03-31,PartTimeJob,Cafe shift payment,81.90,income
-2020-03-20,gas,Had to fill up the tank,67.69,expense
+1,2026-01-01,Scholarship,Winter scholarship disbursement,1200.00,income
+2,2026-01-01,Rent,January dorm rent,600.00,expense
+3,2026-01-02,Groceries,Weekly groceries campus store,45.32,expense
+4,2026-01-02,Transport,Bus pass top up,25.00,expense
+5,2026-01-03,PartTimeJob,Cafe shift payment,80.00,income
+6,2026-01-03,Coffee,Study session coffee,4.75,expense
+7,2026-01-04,Books,Second hand textbook math,35.00,expense
+8,2026-01-04,Snacks,Vending machine snacks,3.20,expense
+9,2026-01-05,PartTimeJob,Cafe shift payment,76.50,income
+10,2026-01-05,Entertainment,Movie night campus,12.00,expense
+11,2026-01-06,Groceries,Weekly groceries discount store,39.80,expense
+12,2026-01-06,Printing,Print lecture notes,2.50,expense
+13,2026-01-07,Scholarship,Local grant installment,300.00,income
+14,2026-01-07,Transport,Ride share to campus,8.60,expense
+15,2026-01-08,Rent,Utilities internet share,30.00,expense
+16,2026-01-08,Coffee,Morning latte,3.95,expense
+17,2026-01-09,PartTimeJob,Cafe shift payment,82.75,income
+18,2026-01-09,Food,Late night pizza with friends,14.99,expense
+19,2026-01-10,Groceries,Weekly groceries supermarket,47.10,expense
+20,2026-01-10,Health,Pharmacy cold medicine,9.99,expense
+21,2026-01-11,Transport,Bus tickets,12.00,expense
+22,2026-01-11,Entertainment,Board game cafe,10.00,expense
+23,2026-01-12,PartTimeJob,Extra weekend shift,95.20,income
+24,2026-01-12,Snacks,Campus cafe muffin,3.50,expense
+25,2026-01-13,StudyMaterials,Highlighters and pens,6.40,expense
+26,2026-01-13,Coffee,Iced coffee between classes,4.10,expense
+27,2026-01-14,Groceries,Weekly groceries,42.75,expense
+28,2026-01-14,Transport,Ride share home,7.80,expense
+29,2026-01-15,Rent,Mid month utilities,28.00,expense
+30,2026-01-15,PartTimeJob,Cafe shift payment,78.60,income
+31,2026-01-16,Subscriptions,Music streaming student plan,5.99,expense
+32,2026-01-16,Food,Cafeteria lunch,7.50,expense
+33,2026-01-17,Groceries,Top up groceries,22.30,expense
+34,2026-01-17,Entertainment,Streaming movie,5.00,expense
+35,2026-01-18,PartTimeJob,Cafe shift payment,81.40,income
+36,2026-01-18,Coffee,Study group coffee,6.25,expense
+37,2026-01-19,Transport,Bus pass renewal,30.00,expense
+38,2026-01-19,Snacks,Chips and soda,4.20,expense
+39,2026-01-20,Groceries,Weekly groceries,44.18,expense
+40,2026-01-20,Health,Multivitamins,12.99,expense
+41,2026-01-21,Scholarship,Merit bonus,150.00,income
+42,2026-01-21,Books,Used programming book,28.00,expense
+43,2026-01-22,PartTimeJob,Cafe shift payment,79.10,income
+44,2026-01-22,Entertainment,Campus concert ticket,15.00,expense
+45,2026-01-23,Groceries,Weekly groceries,41.90,expense
+46,2026-01-23,Coffee,Latte between labs,4.50,expense
+47,2026-01-24,Transport,Ride share late night,9.70,expense
+48,2026-01-24,Food,Burger place dinner,13.80,expense
+49,2026-01-25,PartTimeJob,Cafe shift payment,83.25,income
+50,2026-01-25,Subscriptions,Cloud storage student,1.99,expense
+51,2026-01-26,Groceries,Top up groceries,19.45,expense
+52,2026-01-26,Snacks,Chocolate bar,2.20,expense
+53,2026-01-27,Rent,End of month utilities,32.00,expense
+54,2026-01-27,Entertainment,Arcade night,11.00,expense
+55,2026-01-28,PartTimeJob,Cafe shift payment,77.80,income
+56,2026-01-28,Coffee,Flat white,4.30,expense
+57,2026-01-29,Groceries,Weekly groceries,46.05,expense
+58,2026-01-29,StudyMaterials,Notebook and binder,9.60,expense
+59,2026-01-30,Transport,Bus tickets,10.00,expense
+60,2026-01-30,Food,Campus lunch,6.90,expense
+61,2026-01-31,PartTimeJob,Cafe shift payment,80.90,income
+62,2026-01-31,Entertainment,Game rental,7.50,expense
+63,2026-02-01,Scholarship,Spring scholarship disbursement,1200.00,income
+64,2026-02-01,Rent,February dorm rent,600.00,expense
+65,2026-02-02,Groceries,Weekly groceries campus store,48.20,expense
+66,2026-02-02,Transport,Bus pass top up,25.00,expense
+67,2026-02-03,PartTimeJob,Cafe shift payment,82.30,income
+68,2026-02-03,Coffee,Study session coffee,4.80,expense
+69,2026-02-04,Books,Lab manual purchase,24.50,expense
+70,2026-02-04,Snacks,Vending machine snacks,3.10,expense
+71,2026-02-05,PartTimeJob,Cafe shift payment,79.40,income
+72,2026-02-05,Entertainment,Movie night campus,11.50,expense
+73,2026-02-06,Groceries,Weekly groceries discount store,43.70,expense
+74,2026-02-06,Printing,Print project report,3.20,expense
+75,2026-02-07,Scholarship,Local grant installment,300.00,income
+76,2026-02-07,Transport,Ride share to campus,9.10,expense
+77,2026-02-08,Rent,Utilities internet share,30.00,expense
+78,2026-02-08,Coffee,Morning latte,3.95,expense
+79,2026-02-09,PartTimeJob,Cafe shift payment,83.10,income
+80,2026-02-09,Food,Late night noodles,9.50,expense
+81,2026-02-10,Groceries,Weekly groceries,45.65,expense
+82,2026-02-10,Health,Pharmacy allergy pills,13.49,expense
+83,2026-02-11,Transport,Bus tickets,12.00,expense
+84,2026-02-11,Entertainment,Board game cafe,9.50,expense
+85,2026-02-12,PartTimeJob,Extra weekend shift,96.80,income
+86,2026-02-12,Snacks,Campus cafe muffin,3.60,expense
+87,2026-02-13,StudyMaterials,Highlighters and index cards,7.20,expense
+88,2026-02-13,Coffee,Iced coffee between classes,4.30,expense
+89,2026-02-14,Groceries,Weekly groceries,44.40,expense
+90,2026-02-14,Transport,Ride share home,8.10,expense
+91,2026-02-15,Rent,Mid month utilities,28.00,expense
+92,2026-02-15,PartTimeJob,Cafe shift payment,80.50,income
+93,2026-02-16,Subscriptions,Music streaming student plan,5.99,expense
+94,2026-02-16,Food,Cafeteria lunch,7.80,expense
+95,2026-02-17,Groceries,Top up groceries,20.15,expense
+96,2026-02-17,Entertainment,Streaming movie,4.50,expense
+97,2026-02-18,PartTimeJob,Cafe shift payment,82.90,income
+98,2026-02-18,Coffee,Study group coffee,6.40,expense
+99,2026-02-19,Transport,Bus pass renewal,30.00,expense
+100,2026-02-19,Snacks,Chips and soda,4.10,expense
+101,2026-02-20,Groceries,Weekly groceries,47.25,expense
+102,2026-02-20,Health,Multivitamins,13.99,expense
+103,2026-02-21,Scholarship,Merit bonus,150.00,income
+104,2026-02-21,Books,Used statistics book,27.00,expense
+105,2026-02-22,PartTimeJob,Cafe shift payment,81.30,income
+106,2026-02-22,Entertainment,Campus comedy show,12.00,expense
+107,2026-02-23,Groceries,Weekly groceries,42.35,expense
+108,2026-02-23,Coffee,Latte between labs,4.45,expense
+109,2026-02-24,Transport,Ride share late night,9.90,expense
+110,2026-02-24,Food,Burger place dinner,14.20,expense
+111,2026-02-25,PartTimeJob,Cafe shift payment,84.00,income
+112,2026-02-25,Subscriptions,Cloud storage student,1.99,expense
+113,2026-02-26,Groceries,Top up groceries,21.70,expense
+114,2026-02-26,Snacks,Chocolate bar,2.30,expense
+115,2026-02-27,Rent,End of month utilities,32.00,expense
+116,2026-02-27,Entertainment,Arcade night,10.50,expense
+117,2026-02-28,PartTimeJob,Cafe shift payment,78.90,income
+118,2026-02-28,Coffee,Flat white,4.25,expense
+119,2026-03-01,Scholarship,Spring bonus,300.00,income
+120,2026-03-01,Rent,March dorm rent,600.00,expense
+121,2026-03-02,Groceries,Weekly groceries campus store,49.80,expense
+122,2026-03-02,Transport,Bus pass top up,25.00,expense
+123,2026-03-03,PartTimeJob,Cafe shift payment,83.40,income
+124,2026-03-03,Coffee,Study session coffee,4.90,expense
+125,2026-03-04,Books,Programming reference guide,29.50,expense
+126,2026-03-04,Snacks,Vending machine snacks,3.15,expense
+127,2026-03-05,PartTimeJob,Cafe shift payment,80.70,income
+128,2026-03-05,Entertainment,Movie night campus,11.75,expense
+129,2026-03-06,Groceries,Weekly groceries discount store,44.90,expense
+130,2026-03-06,Printing,Print lab report,2.90,expense
+131,2026-03-07,Scholarship,Local grant installment,300.00,income
+132,2026-03-07,Transport,Ride share to campus,9.30,expense
+133,2026-03-08,Rent,Utilities internet share,30.00,expense
+134,2026-03-08,Coffee,Morning latte,3.95,expense
+135,2026-03-09,PartTimeJob,Cafe shift payment,82.60,income
+136,2026-03-09,Food,Late night pizza,11.20,expense
+137,2026-03-10,Groceries,Weekly groceries,46.10,expense
+138,2026-03-10,Health,Pharmacy pain relief,8.99,expense
+139,2026-03-11,Transport,Bus tickets,12.00,expense
+140,2026-03-11,Entertainment,Board game cafe,9.75,expense
+141,2026-03-12,PartTimeJob,Extra weekend shift,97.40,income
+142,2026-03-12,Snacks,Campus cafe muffin,3.70,expense
+143,2026-03-13,StudyMaterials,Index cards and sticky notes,6.90,expense
+144,2026-03-13,Coffee,Iced coffee between classes,4.35,expense
+145,2026-03-14,Groceries,Weekly groceries,45.90,expense
+146,2026-03-14,Transport,Ride share home,8.30,expense
+147,2026-03-15,Rent,Mid month utilities,28.00,expense
+148,2026-03-15,PartTimeJob,Cafe shift payment,81.50,income
+149,2026-03-16,Subscriptions,Music streaming student plan,5.99,expense
+150,2026-03-16,Food,Cafeteria lunch,7.95,expense
+151,2026-03-17,Groceries,Top up groceries,23.40,expense
+152,2026-03-17,Entertainment,Streaming movie,4.80,expense
+153,2026-03-18,PartTimeJob,Cafe shift payment,83.20,income
+154,2026-03-18,Coffee,Study group coffee,6.60,expense
+155,2026-03-19,Transport,Bus pass renewal,30.00,expense
+156,2026-03-19,Snacks,Chips and soda,4.30,expense
+157,2026-03-20,Groceries,Weekly groceries,47.80,expense
+158,2026-03-20,Health,Multivitamins,13.99,expense
+159,2026-03-21,Scholarship,Merit bonus,150.00,income
+160,2026-03-21,Books,Used database book,26.00,expense
+161,2026-03-22,PartTimeJob,Cafe shift payment,82.10,income
+162,2026-03-22,Entertainment,Campus concert ticket,14.00,expense
+163,2026-03-23,Groceries,Weekly groceries,43.10,expense
+164,2026-03-23,Coffee,Latte between labs,4.55,expense
+165,2026-03-24,Transport,Ride share late night,10.10,expense
+166,2026-03-24,Food,Burger place dinner,14.60,expense
+167,2026-03-25,PartTimeJob,Cafe shift payment,85.00,income
+168,2026-03-25,Subscriptions,Cloud storage student,1.99,expense
+169,2026-03-26,Groceries,Top up groceries,22.80,expense
+170,2026-03-26,Snacks,Chocolate bar,2.40,expense
+171,2026-03-27,Rent,End of month utilities,32.00,expense
+172,2026-03-27,Entertainment,Arcade night,10.80,expense
+173,2026-03-28,PartTimeJob,Cafe shift payment,79.50,income
+174,2026-03-28,Coffee,Flat white,4.35,expense
+175,2026-03-29,Groceries,Weekly groceries,48.20,expense
+176,2026-03-29,StudyMaterials,Notebook and binder,9.90,expense
+177,2026-03-30,Transport,Bus tickets,10.00,expense
+178,2026-03-30,Food,Campus lunch,7.10,expense
+179,2026-03-31,PartTimeJob,Cafe shift payment,81.90,income
+180,2020-03-20,gas,Had to fill up the tank,67.69,expense
