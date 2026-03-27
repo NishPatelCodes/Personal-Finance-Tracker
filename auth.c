@@ -126,8 +126,9 @@ int login_user(char *username, char *password) {
         stored_username[i] = '\0';  // null terminate the username
         i++;    // skip past the comma
 
-        // Extract the password — everything after the comma until end of line
-        while (line[i] != '\0' && line[i] != '\n') {
+        // Extract the password — everything after the comma until end of line.
+        // On Windows text files are usually CRLF (\r\n), so stop on both.
+        while (line[i] != '\0' && line[i] != '\n' && line[i] != '\r') {
             stored_password[j] = line[i];
             i++;
             j++;

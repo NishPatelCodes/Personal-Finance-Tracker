@@ -289,6 +289,7 @@ void user_login_menu() {
         printf("\n\nEnter your choice: ");
 
         int loginMenuChoice = getchar();
+        // to clear the enter key from the input buffer
         getchar();
 
         char inputUsername[50];
