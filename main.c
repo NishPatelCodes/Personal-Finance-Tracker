@@ -20,49 +20,10 @@
 #include <stdio.h>
 #include <string.h>
 
+#include "tellGCCthesefunctions.h"
 
 // ======================================================
-// ================ Function Prototypes =================
-// ======================================================
-// These are declarations of all functions used in the program
-// They must be declared before main() so the compiler knows they exist
-// The actual logic for each function is in their respective .c files
-
-// ---- main.c functions ----
-void print_menu(int *running);
-void print_manage_transactions_menu();
-void print_search_filter_menu();
-void print_reports_menu();
-void print_welcome_message();
-void user_login_menu();
-
-// ---- encryption.c functions ----
-void  encrypt_password(char *password, char *output);
-void  decrypt_password(char *encrypted, char *output);
-int   mod_inverse(int a, int mod);
-
-// ---- auth.c functions ----
-int   register_user(char *username, char *password);
-int   login_user(char *username, char *password);
-int   user_exists(char *username);
-
-// ---- transactions.c functions ----
-void  add_transaction(char *username);
-int   delete_transaction(char *username, int id);
-int   update_transaction(char *username, int id);
-void  view_transactions(char *username);
-
-// ---- reports.c functions ----
-void  generate_overall_report(char *username);
-void  generate_category_report(char *username, char *category);
-void  export_report_to_txt(char *username);
-void  search_by_date(char *username, char *date);
-void  filter_by_category(char *username, char *category);
-void  filter_by_type(char *username, char *filterType);
-
-
-// ======================================================
-// ================ Global user (set after login) =======
+// ============ Global user (set after login) ===========
 // ======================================================
 
 char username[50] = "testuser";
@@ -346,6 +307,10 @@ void user_login_menu() {
     }
 }
 
+
+// ======================================================
+// ==================== Main Loop =======================
+// ======================================================
 
 int main() {
     print_welcome_message();

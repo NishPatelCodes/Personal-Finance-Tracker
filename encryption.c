@@ -11,6 +11,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#include "tellGCCthesefunctions.h"
+
 // Macros, replaces all instances before the code compiles
 #define MATRIX_SIZE 2
 #define MOD 26

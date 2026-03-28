@@ -1,2 +1,0 @@
-1,2026-03-20,Gas,Filled the car,67.69,Expense
-2,2026-03-24,Food,Date night,134.23,Expense

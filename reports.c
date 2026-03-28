@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <string.h>
 
+#include "tellGCCthesefunctions.h"
 
 void  generate_overall_report(char *username){
     char filename[100];

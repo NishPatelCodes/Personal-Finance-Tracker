@@ -10,6 +10,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#include "tellGCCthesefunctions.h"
+
 // encrypt_password is defined in encryption.c
 void encrypt_password(char *password, char *output);
 
