@@ -1,6 +1,6 @@
 /*
  * transactions.c
- * 
+ *
  * Handles all transaction file operations (CRUD).
  * Contains functions to add, delete, update, and view
  * income/expense transactions stored in the user's .txt file.
@@ -12,6 +12,8 @@
 
 #include "tellGCCthesefunctions.h"
 
+
+// Strips trailing newline and carriage return characters from a string
 static void trim_newlines(char *s) {
     size_t len = strlen(s);
     while (len > 0 && (s[len - 1] == '\n' || s[len - 1] == '\r')) {
@@ -20,6 +22,7 @@ static void trim_newlines(char *s) {
     }
 }
 
+// Prints a prompt and reads a full line of input into out, stripping the trailing newline
 static void read_line_input(const char *prompt, char *out, size_t outSize) {
     printf("%s", prompt);
     if (fgets(out, (int)outSize, stdin) == NULL) {
@@ -30,155 +33,114 @@ static void read_line_input(const char *prompt, char *out, size_t outSize) {
 }
 
 
-// This function prompts the user for transaction details and appends it to their transactions file
-// It accepts a pointer to the username string to build the correct filename
+// Prompts the user for transaction details and appends it to their transactions file
+// date is 11 chars: 10 for "YYYY-MM-DD" + 1 for null terminator
 void add_transaction(char *username) {
 
-    // Variables to hold each field of the transaction
-    // date is 11 chars: 10 for "YYYY-MM-DD" + 1 for null terminator
     char date[11];
     char category[30];
     char description[100];
     float amount;
     char type[10];  // either "income" or "expense"
 
-
-    // Prompt the user for each transaction field one at a time
-
-    // Date — scanf reads a single word (no spaces), stops at newline
+    // Date and category use scanf since they are single words with no spaces
     printf("Date (YYYY-MM-DD): ");
     scanf("%s", date);
-    while (getchar() != '\n');  // Clear the leftover '\n' from the input buffer
-                                // Without this, the next input call would read the '\n' instead of waiting
+    while (getchar() != '\n');
 
-    // Category — scanf reads a single word (no spaces), stops at newline
     printf("Category (Food, Rent, etc): ");
     scanf("%s", category);
-    while (getchar() != '\n');  // Clear input buffer after scanf
+    while (getchar() != '\n');
 
-
-    // Description — fgets is used instead of scanf to allow spaces in the input
-    // e.g. "Monthly Rent" would be cut to "Monthly" with scanf
+    // fgets is used for description to allow spaces e.g. "Monthly Rent"
+    // The trailing newline left by fgets is stripped after reading
     printf("Description: ");
     fgets(description, sizeof(description), stdin);
-
-    // fgets includes the '\n' character at the end of the string, so we strip it
-    // by replacing it with a null terminator '\0'
     int len = strlen(description);
     if (description[len - 1] == '\n')
         description[len - 1] = '\0';
 
+    // sanitize_description replaces any commas with spaces to preserve CSV structure
     sanitize_description(description);
 
-    // Amount — scanf reads a float value
     printf("Amount: ");
     scanf("%f", &amount);
-    while (getchar() != '\n');  // Clear input buffer after scanf
+    while (getchar() != '\n');
 
-
-    // Type — either "income" or "expense"
     printf("Type (income/expense): ");
     scanf("%s", type);
-    while (getchar() != '\n');  // Clear input buffer after scanf
+    while (getchar() != '\n');
 
-
-    // Build the filename using the username
-    // e.g. username "testuser" → "transactions_testuser.txt"
-    // sprintf formats the string and stores it in filename
+    // Build filename e.g. "transactions_testuser.txt"
     char filename[100];
     sprintf(filename, "transactions_%s.txt", username);
 
+    // Get the next available ID by scanning the file for the current highest ID
     int nextId = transactions_next_id(username);
 
-    // Open the file in append mode "a"
-    // If the file does not exist, fopen will create it automatically
-    // If it does exist, new transactions will be added to the end
+    // Open in append mode — creates the file if it doesn't exist
     FILE *file = fopen(filename, "a");
     if (file == NULL) {
-        // fopen returns NULL if the file could not be opened
         printf("Error opening file.\n");
         return;
     }
 
-    // Write the transaction to the file as a comma separated line
-    // %.2f formats the amount to 2 decimal places e.g. 45.50
+    // Write the transaction as a comma separated line
     // Format: id,date,category,description,amount,type
     fprintf(file, "%d,%s,%s,%s,%.2f,%s\n", nextId, date, category, description, amount, type);
-    fclose(file);   // Always close the file after writing to free system resources
+    fclose(file);
 
     printf("Transaction saved!\n");
 }
 
 
-// This function deletes a transaction by its ID
-// Since we cannot remove a single line from a file in C, we use a temp file
-// Strategy: copy all lines EXCEPT the target ID into a temp file, then replace the original file with the temp file
-// Accepts a pointer to the username string and the ID of the transaction to delete
-// Returns 1 if the transaction was deleted, 0 if not found or an error occurs
+// Deletes a transaction by its ID
+// Strategy: copy all lines EXCEPT the target ID into a temp file,
+// then replace the original file with the temp file
+// Returns 1 if deleted, 0 if not found or an error occurs
 int delete_transaction(char *username, int id) {
 
-    // filename holds the original transactions file e.g. "transactions_testuser.txt"
-    // tempFilename holds the temporary file e.g. "temp_transactions_testuser.txt"
-    // line holds the current line being read from the file
-    // deleted tracks whether we successfully found and skipped the target transaction
     char filename[100];
     char tempFilename[110];
     char line[256];
     int deleted = 0;
 
-    // Build both filenames using the username
-    // e.g. username "testuser" → "transactions_testuser.txt"
-    //                          → "temp_transactions_testuser.txt"
     sprintf(filename, "transactions_%s.txt", username);
     sprintf(tempFilename, "temp_transactions_%s.txt", username);
 
-
-    // Open the original file for reading "r"
-    // If the file does not exist, there are no transactions to delete
     FILE *file = fopen(filename, "r");
     if (file == NULL) {
         printf("No transactions found.\n");
         return 0;
     }
 
-    // Open the temp file for writing "w"
-    // This is where we will copy all lines except the one to delete
-    // If it fails we close the original file to avoid a resource leak
     FILE *tempFile = fopen(tempFilename, "w");
     if (tempFile == NULL) {
         printf("Error creating temporary file.\n");
-        fclose(file);   // close the original file before returning to free system resources
+        fclose(file);
         return 0;
     }
 
-
-    // Copy all lines except the one with the matching stored ID.
+    // Read line by line — skip the line whose ID matches the target
     while (fgets(line, sizeof(line), file) != NULL) {
         Transaction t;
         if (parse_transaction_line(line, &t) && t.id == id) {
             deleted = 1;
-            continue; // skip this line (effectively deleting it)
+            continue;   // skip this line to effectively delete it
         }
         fputs(line, tempFile);
     }
 
-    // Always close both files after we are done reading and writing
     fclose(file);
     fclose(tempFile);
 
-
     if (!deleted) {
-        // The target ID was never found meaning it does not exist
-        // Remove the temp file since we don't need it
         printf("Transaction ID not found.\n");
         remove(tempFilename);
         return 0;
     }
 
     // Replace the original file with the temp file
-    // remove() deletes the original file
-    // rename() renames the temp file to the original filename
-    // The result is the original file now exists without the deleted transaction
     remove(filename);
     rename(tempFilename, filename);
 
@@ -187,12 +149,12 @@ int delete_transaction(char *username, int id) {
 }
 
 
-// This function updates a single field of a transaction by its ID
-// Since we cannot edit a single line in a file in C, we use the same temp file strategy as delete
-// Strategy: copy all lines into a temp file, but replace the target line with the updated data
-// Accepts a pointer to the username string and the ID of the transaction to update
-// Returns 1 if the transaction was updated, 0 if not found or an error occurs
+// Updates a single field of a transaction by its ID
+// Strategy: copy all lines into a temp file, replacing the target line with updated data,
+// then replace the original file with the temp file
+// Returns 1 if updated, 0 if not found or an error occurs
 int update_transaction(char *username, int id) {
+
     char filename[100];
     char tempFilename[110];
     char line[256];
@@ -217,11 +179,13 @@ int update_transaction(char *username, int id) {
     while (fgets(line, sizeof(line), file) != NULL) {
         Transaction t;
 
+        // If this line is not the target, copy it unchanged and move on
         if (!(parse_transaction_line(line, &t) && t.id == id)) {
             fputs(line, tempFile);
             continue;
         }
 
+        // Found the target — show current values and ask what to update
         printf("Current transaction %d:\n", t.id);
         printf("Date: %s | Category: %s | Description: %s | Amount: %.2f | Type: %s\n",
                t.date, t.category, t.description, t.amount, t.type);
@@ -238,6 +202,7 @@ int update_transaction(char *username, int id) {
         read_line_input("Enter choice: ", choice, sizeof(choice));
         char c = choice[0];
 
+        // Overwrite only the chosen field directly in the Transaction struct
         switch (c) {
             case '1':
                 read_line_input("New Date (YYYY-MM-DD): ", t.date, sizeof(t.date));
@@ -247,18 +212,19 @@ int update_transaction(char *username, int id) {
                 break;
             case '3':
                 read_line_input("New Description: ", t.description, sizeof(t.description));
-                sanitize_description(t.description);
+                sanitize_description(t.description);    // strip any commas from the new description
                 break;
             case '4': {
                 char amtBuf[64];
                 read_line_input("New Amount: ", amtBuf, sizeof(amtBuf));
-                t.amount = (float)atof(amtBuf);
+                t.amount = (float)atof(amtBuf);     // convert string input to float
                 break;
             }
             case '5':
                 read_line_input("New Type (income/expense): ", t.type, sizeof(t.type));
                 break;
             case '6':
+                // Discard the temp file and exit with no changes
                 fclose(file);
                 fclose(tempFile);
                 remove(tempFilename);
@@ -269,6 +235,7 @@ int update_transaction(char *username, int id) {
                 break;
         }
 
+        // Write the updated transaction back to the temp file
         write_transaction_line(tempFile, &t);
         updated = 1;
     }
@@ -282,6 +249,7 @@ int update_transaction(char *username, int id) {
         return 0;
     }
 
+    // Replace the original file with the updated temp file
     remove(filename);
     rename(tempFilename, filename);
 
@@ -290,11 +258,9 @@ int update_transaction(char *username, int id) {
 }
 
 
-// This function reads and displays all transactions from the user's file in a formatted table
-// Each line in the file is one transaction, displayed with its ID, date, category,
-// description, amount and type
-// Accepts a pointer to the username string to build the correct filename
+// Reads and displays all transactions from the user's file in a formatted table
 void view_transactions(char *username) {
+
     char filename[100];
     char line[256];
 
@@ -306,14 +272,16 @@ void view_transactions(char *username) {
         return;
     }
 
+    // Print table header — columns are left aligned with fixed widths
     printf("\n\n================================= Transactions ===================================\n");
     printf("%-5s %-12s %-12s %-30s %-10s %-10s\n",
            "ID", "Date", "Category", "Description", "Amount", "Type");
     printf("----------------------------------------------------------------------------------\n");
 
+    // Parse and display each transaction line by line
     while (fgets(line, sizeof(line), file) != NULL) {
         Transaction t;
-        if (!parse_transaction_line(line, &t)) continue;
+        if (!parse_transaction_line(line, &t)) continue;    // skip malformed lines
 
         printf("%-5d %-12s %-12s %-30s %-10.2f %-10s\n",
                t.id, t.date, t.category, t.description, t.amount, t.type);

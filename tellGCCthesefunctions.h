@@ -1,9 +1,8 @@
-/* transactions_csv.h
- * CSV parsing/writing utilities for the transactions files:
- *   id,date,category,description,amount,type
+/* TELLGCCTHESEFUNCTIONS_C.h
+* Stores the struct definition and function prototypes for all files
  */
 #ifndef TELLGCCTHESEFUNCTIONS_C
-#define TRANSACTIONS_CSV_H
+#define TELLGCCTHESEFUNCTIONS_C
 
 #include <stdio.h>
 
@@ -13,11 +12,11 @@
 // ======================================================
 typedef struct {
     int id;
-    char date[11];            /* YYYY-MM-DD (10) + null terminator */
+    char date[11];            
     char category[30];
     char description[100];
     float amount;
-    char type[10];           /* income | expense */
+    char type[10];           
 } Transaction;
 
 
